@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Administración
+                </li>
+               <li>
+                    <a href="{% url 'crearusuario' %}" rel="next">Crear Usuario</a>
+                </li>
+				 <li>
+                    <a href="{% url 'listaruser' %}">Eliminar Usuario</a>
+                </li>
+				 <li>
+                    <a href="{% url 'crearproyecto' %}">Crear Proyecto</a>
+                </li>
+				<li class="sidebar-brand">
+                        ____________________
+                     </li>
+				<li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'administracion' %}">Administracion</a>
+					&rsaquo; Crear Usuario
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+						<h3  class="list-group-item active">
+								Alta de Usuario
+						</h3>
+                        <form action="" class="" method="POST" >{% csrf_token %}
+							<div class="form-group ">
+								<label for="username">Username</label>
+								<input class="form-control" name="username" id="username" type="text"  required>
+							</div>
+							<div class="form-group ">
+								<label for="nombre">Nombre</label>
+								<input class="form-control" name="nombre" id="nombre" type="text"  required>
+							</div>
+							<div class="form-group">
+								<label for="apellido">Apellido</label>
+								<input type="text" id="apellido" class="form-control" name= "apellido"  required>
+								
+							</div>
+							<div class="form-group ">
+								<label for="direccion">Dirección</label>
+								<input class="form-control" name="direccion" id="direccion" type="text" >
+							</div>
+							<div class="form-group ">
+								<label for="email">Email</label>
+								<input class="form-control" name="email" id="email" type="email" required>
+							</div>
+                            <div class="form-group ">
+								<label for="telefono">Teléfono</label>
+								<input class="form-control" name="telefono" id="telefono" type="text" required>
+							</div>
+                            <div class="form-group ">
+								<label for="descripcion">Descripción</label>
+								<input class="form-control" name="descripcion" id="descripcion" type="text" required>
+							</div>
+                            <div class="form-group ">
+								<label for="captrabajo">Capacidad de trabajo</label>
+								<input class="form-control" name="captrabajo"  type="number" min="1" max="16" required>
+							</div>
+							<div class="form-group">
+								<label for="password" class="text-primary">Ingresar   Contraseña</label>
+								<input class="password-reset-link" id="password" name="password" type="password"  required>
+							</div>
+							<div class="form-group">
+								<label for="password2" class="text-primary">Confirmar Contraseña</label>
+								<input class="password-reset-link" id="password2" name="password2" type="password"  required>
+							</div>
+                            <label for="option">¿Es administrador?</label>
+                                <select class="form-control" name="es_administrador" id="option" >
+                                    <option value="si">Si</option>
+                                    <option value="no">No</option>
+
+                                </select>
+							<button class="btn bg bottom-left" >Guardar</button>
+						</form>
+						{% if mensaje %}
+                                {% if mensaje == 'Guardado exitoso' %}
+                                    <div class="alert-success" role="alert">
+                                    {{ mensaje }}
+                                    </div>
+                                {% else %}
+                                    <div class="alert-danger form-control" role="alert">
+                                    {{ mensaje }}
+                                    </div>
+                                {% endif %}
+                        {% endif %}
+						
+						
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

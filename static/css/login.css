@@ -1,0 +1,92 @@
+header{
+  background-color: black;
+  width: 100.3%; /* Establecemos que el header abarque el 100% del documento */
+  overflow:hidden;
+  margin: 0 auto;
+  font-family: "Arial Black";
+  font-size: 18pt;
+  color: #5bc0de;
+  font-style: italic;
+  height: 80px
+  /*margin: 0px 0 0px 0;*/
+}
+body {
+  /*padding-top: 2px;
+  padding-bottom: 2px;*/
+  margin: 0 auto;
+/*  background-color: #4cae4c;*/
+}
+
+.col-md-3 {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #d43f3a;
+}
+/*.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}*/
+/*.col-md-3 .checkbox {
+  font-weight: normal;
+}*/
+.col-md-3 .form-control {
+  /*position: relative;*/
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.col-md-9{
+  /*position: relative;*/
+  overflow:hidden;
+  margin: 0 auto;
+  font-family: "Arial Black";
+  font-size: 12pt;
+  font-style: italic;
+  text-align: center;
+}
+/*.form-signin .form-control:focus {
+  z-index: 2;
+}*/
+.col-md-3 input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 20px 0 20px 0;
+}
+.col-md-3 input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin: 20px 0 20px 0;
+}
+.alert-danger {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin: 20px 0 20px 0;
+  /*background-color: #ffff00*/
+}/*
+.btn {
+  background-color: #ffff00;
+}*/
+footer {
+  /*position: relative;*/
+  /* Altura total del footer en px con valor negativo */
+ /* margin-top: -50px;*/
+  /* Altura del footer en px. Se han restado los 5px del margen
+     superior mas los 5px del margen inferior
+  */
+ /* margin: 10px 0 10px 0;*/
+  height: 70px;
+  /*padding:5px 0px;*/
+  /*clear: both;*/
+  background: black;
+  text-align: center;
+  color: aquamarine;
+  width: 100.3%;
+  overflow:hidden;
+  margin: 0 auto;
+}

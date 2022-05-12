@@ -1,0 +1,89 @@
+\hypertarget{class_sprints_1_1migrations_1_10001__initial_1_1_migration}{}\section{Referencia de la Clase Sprints.\+migrations.0001\+\_\+initial.Migration}
+\label{class_sprints_1_1migrations_1_10001__initial_1_1_migration}\index{Sprints.\+migrations.\+0001\+\_\+initial.\+Migration@{Sprints.\+migrations.\+0001\+\_\+initial.\+Migration}}
+Diagrama de herencias de Sprints.\+migrations.0001\+\_\+initial.Migration\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sprints_1_1migrations_1_10001__initial_1_1_migration}
+\end{center}
+\end{figure}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a6933255dcf8717f6fe79f46a84e3889a}{initial} = True
+\item 
+list \hyperlink{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a88d3ca1bdd26753226e2336ff0f591cf}{dependencies}
+\item 
+list \hyperlink{class_sprints_1_1migrations_1_10001__initial_1_1_migration_ab7ef4aab24ce79cb91f7d76fa8efae58}{operations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 9 del archivo 0001\+\_\+initial.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{dependencies}{dependencies}}]{\setlength{\rightskip}{0pt plus 5cm}list Sprints.\+migrations.\+0001\+\_\+initial.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a88d3ca1bdd26753226e2336ff0f591cf}{}\label{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a88d3ca1bdd26753226e2336ff0f591cf}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         (\textcolor{stringliteral}{'proyectos'}, \textcolor{stringliteral}{'0001\_initial'}),
+3     ]
+\end{DoxyCode}
+
+
+Definición en la línea 13 del archivo 0001\+\_\+initial.\+py.
+
+\index{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}!initial@{initial}}
+\index{initial@{initial}!Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{initial}{initial}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sprints.\+migrations.\+0001\+\_\+initial.\+Migration.\+initial = True\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a6933255dcf8717f6fe79f46a84e3889a}{}\label{class_sprints_1_1migrations_1_10001__initial_1_1_migration_a6933255dcf8717f6fe79f46a84e3889a}
+
+
+Definición en la línea 11 del archivo 0001\+\_\+initial.\+py.
+
+\index{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}!operations@{operations}}
+\index{operations@{operations}!Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration@{Sprints\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{operations}{operations}}]{\setlength{\rightskip}{0pt plus 5cm}list Sprints.\+migrations.\+0001\+\_\+initial.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1migrations_1_10001__initial_1_1_migration_ab7ef4aab24ce79cb91f7d76fa8efae58}{}\label{class_sprints_1_1migrations_1_10001__initial_1_1_migration_ab7ef4aab24ce79cb91f7d76fa8efae58}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         migrations.CreateModel(
+3             name=\textcolor{stringliteral}{'Sprint'},
+4             fields=[
+5                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+6                 (\textcolor{stringliteral}{'nombre'}, models.CharField(default=b\textcolor{stringliteral}{''}, max\_length=50)),
+7                 (\textcolor{stringliteral}{'duracion'}, models.IntegerField()),
+8                 (\textcolor{stringliteral}{'fechaInicio'}, models.DateField()),
+9                 (\textcolor{stringliteral}{'fechaFin'}, models.DateField()),
+10                 (\textcolor{stringliteral}{'tiempo\_asignado'}, models.FloatField(default=0, null=\textcolor{keyword}{True})),
+11                 (\textcolor{stringliteral}{'estado'}, models.CharField(choices=[(b\textcolor{stringliteral}{'Pendiente'}, b\textcolor{stringliteral}{'Pendiente'}), (b\textcolor{stringliteral}{'Ejecutando'}, b\textcolor{stringliteral}{'
+      Ejecutando'}), (b\textcolor{stringliteral}{'Cancelado'}, b\textcolor{stringliteral}{'Cancelado'}), (b\textcolor{stringliteral}{'Finalizado'}, b\textcolor{stringliteral}{'Finalizado'})], max\_length=50)),
+12                 (\textcolor{stringliteral}{'id\_proyecto'}, models.ForeignKey(null=\textcolor{keyword}{True}, on\_delete=django.db.models.deletion.CASCADE, 
+      to=\textcolor{stringliteral}{'proyectos.Proyecto'})),
+13             ],
+14         ),
+15         migrations.CreateModel(
+16             name=\textcolor{stringliteral}{'Sprint\_Usuarios'},
+17             fields=[
+18                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+19                 (\textcolor{stringliteral}{'usuario'}, models.CharField(default=b\textcolor{stringliteral}{''}, max\_length=50)),
+20                 (\textcolor{stringliteral}{'sprint'}, models.CharField(default=b\textcolor{stringliteral}{''}, max\_length=50)),
+21             ],
+22         ),
+23     ]
+\end{DoxyCode}
+
+
+Definición en la línea 17 del archivo 0001\+\_\+initial.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/\+Sprints/migrations/\hyperlink{_sprints_2migrations_20001__initial_8py}{0001\+\_\+initial.\+py}\end{DoxyCompactItemize}

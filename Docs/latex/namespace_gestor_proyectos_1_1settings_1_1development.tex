@@ -1,0 +1,80 @@
+\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development}{}\section{Referencia del Namespace Gestor\+Proyectos.\+settings.\+development}
+\label{namespace_gestor_proyectos_1_1settings_1_1development}\index{Gestor\+Proyectos.\+settings.\+development@{Gestor\+Proyectos.\+settings.\+development}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_a36c3ebf8a573165139bc1e71d7fdb026}{D\+E\+B\+UG} = True
+\item 
+list \hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_a8693bb1e864b19e170e272c94b739609}{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS} = \mbox{[}$\,$\mbox{]}
+\item 
+dictionary \hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_ad1fb7c89daf8ad1f355d0fcd3631d636}{D\+A\+T\+A\+B\+A\+S\+ES}
+\item 
+string \hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_a659abb77c4c1394164349b020712fade}{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL} = \textquotesingle{}/static/\textquotesingle{}
+\item 
+tuple \hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_a20b43056463f206b7faca50b3f3fcd3c}{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS} = (os.\+path.\+join(\textquotesingle{}C\+:/Gestor\+Proyectos\textquotesingle{}, \textquotesingle{}static\textquotesingle{}),)
+\item 
+\hyperlink{namespace_gestor_proyectos_1_1settings_1_1development_a01d424d0a41e5027002458ee71ae36b2}{M\+E\+D\+I\+A\+\_\+\+R\+O\+OT} = os.\+path.\+join(\textquotesingle{}C\+:/Gestor\+Proyectos\textquotesingle{}, \textquotesingle{}media\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}configuracion del entorno de desarrollo del sistema, extendida de base.py
+- con base de datos de desarrollo separada
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las variables}
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS@{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}}
+\index{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS@{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}{ALLOWED_HOSTS}}]{\setlength{\rightskip}{0pt plus 5cm}list Gestor\+Proyectos.\+settings.\+development.\+A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS = \mbox{[}$\,$\mbox{]}}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_a8693bb1e864b19e170e272c94b739609}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_a8693bb1e864b19e170e272c94b739609}
+
+
+Definición en la línea 8 del archivo development.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!D\+A\+T\+A\+B\+A\+S\+ES@{D\+A\+T\+A\+B\+A\+S\+ES}}
+\index{D\+A\+T\+A\+B\+A\+S\+ES@{D\+A\+T\+A\+B\+A\+S\+ES}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+B\+A\+S\+ES}{DATABASES}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary Gestor\+Proyectos.\+settings.\+development.\+D\+A\+T\+A\+B\+A\+S\+ES}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_ad1fb7c89daf8ad1f355d0fcd3631d636}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_ad1fb7c89daf8ad1f355d0fcd3631d636}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = \{
+2     \textcolor{stringliteral}{'default'}: \{
+3         \textcolor{stringliteral}{'ENGINE'}: \textcolor{stringliteral}{'django.db.backends.postgresql\_psycopg2'},
+4         \textcolor{stringliteral}{'NAME'}: \textcolor{stringliteral}{'is2'}, \textcolor{comment}{# is2}
+5         \textcolor{stringliteral}{'USER'}: \textcolor{stringliteral}{'is2'},
+6         \textcolor{stringliteral}{'PASSWORD'}: \textcolor{stringliteral}{'12345'},\textcolor{comment}{#12345}
+7 
+8     \}
+9 \}
+\end{DoxyCode}
+
+
+Definición en la línea 11 del archivo development.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!D\+E\+B\+UG@{D\+E\+B\+UG}}
+\index{D\+E\+B\+UG@{D\+E\+B\+UG}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+UG}{DEBUG}}]{\setlength{\rightskip}{0pt plus 5cm}bool Gestor\+Proyectos.\+settings.\+development.\+D\+E\+B\+UG = True}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_a36c3ebf8a573165139bc1e71d7fdb026}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_a36c3ebf8a573165139bc1e71d7fdb026}
+
+
+Definición en la línea 7 del archivo development.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!M\+E\+D\+I\+A\+\_\+\+R\+O\+OT@{M\+E\+D\+I\+A\+\_\+\+R\+O\+OT}}
+\index{M\+E\+D\+I\+A\+\_\+\+R\+O\+OT@{M\+E\+D\+I\+A\+\_\+\+R\+O\+OT}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{M\+E\+D\+I\+A\+\_\+\+R\+O\+OT}{MEDIA_ROOT}}]{\setlength{\rightskip}{0pt plus 5cm}Gestor\+Proyectos.\+settings.\+development.\+M\+E\+D\+I\+A\+\_\+\+R\+O\+OT = os.\+path.\+join(\textquotesingle{}C\+:/Gestor\+Proyectos\textquotesingle{}, \textquotesingle{}media\textquotesingle{})}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_a01d424d0a41e5027002458ee71ae36b2}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_a01d424d0a41e5027002458ee71ae36b2}
+
+
+Definición en la línea 27 del archivo development.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!S\+T\+A\+T\+I\+C\+\_\+\+U\+RL@{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}}
+\index{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL@{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}{STATIC_URL}}]{\setlength{\rightskip}{0pt plus 5cm}string Gestor\+Proyectos.\+settings.\+development.\+S\+T\+A\+T\+I\+C\+\_\+\+U\+RL = \textquotesingle{}/static/\textquotesingle{}}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_a659abb77c4c1394164349b020712fade}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_a659abb77c4c1394164349b020712fade}
+
+
+Definición en la línea 20 del archivo development.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}!S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS@{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}}
+\index{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS@{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}!Gestor\+Proyectos\+::settings\+::development@{Gestor\+Proyectos\+::settings\+::development}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}{STATICFILES_DIRS}}]{\setlength{\rightskip}{0pt plus 5cm}tuple Gestor\+Proyectos.\+settings.\+development.\+S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS = (os.\+path.\+join(\textquotesingle{}C\+:/Gestor\+Proyectos\textquotesingle{}, \textquotesingle{}static\textquotesingle{}),)}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1development_a20b43056463f206b7faca50b3f3fcd3c}{}\label{namespace_gestor_proyectos_1_1settings_1_1development_a20b43056463f206b7faca50b3f3fcd3c}
+
+
+Definición en la línea 22 del archivo development.\+py.
+

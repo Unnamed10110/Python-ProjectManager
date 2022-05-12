@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+
+    <div id="wrapper">
+		
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Mi Cuenta
+                </li>
+				
+                <li>
+                    <a href="{% url 'cambiarcontra'%}" rel="next">Cambiar Contraseña</a>
+                </li>
+				<li>
+                    <a href="{% url 'moduser' %}" rel="next">Modificar mis Datos</a>
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                 </li>
+                <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; Mi cuenta
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2  class="list-group-item active">
+                            Datos Personales {{usuario.username}}
+						</h2>
+						<form action="" class="" >{% csrf_token %}
+							<div class="form-group ">
+								<label for="username">Username:         {{ usuario.user.username }} </label>
+							</div>
+							<div class="form-group ">
+								<label for="nombre">Nombre: {{ usuario.user.first_name}}</label>
+
+							</div>
+							<div class="form-group">
+								<label for="apellido">Apellido: {{ usuario.user.last_name }}</label>
+							</div>
+							<div class="form-group ">
+								<label for="direccion">Dirección:{{usuario.direccion}}</label>
+							</div>
+							<div class="form-group ">
+								<label for="email">Email:           {{ usuario.user.email }}</label>
+							</div>
+						</form>
+										
+								
+							
+						
+					
+				
+				
+						
+						
+						
+						
+						
+						
+                      <!--  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

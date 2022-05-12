@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Flujos
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                </li>
+                <li>
+                    <a href="{% url 'verUScambiarEstado' US.actividad.flujo.id  US.id %}">Atras</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' US.id_proyecto.id %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'ListarSprint' US.id_proyecto.id %}" >Sprints</a>
+                    &rsaquo; <a href="{% url 'listarFlujosSprint' US.sprint.id %}">Flujos del Sprint</a>
+                    &rsaquo; <a href="{% url 'verFlujoSprint' US.actividad.flujo.id US.sprint.id %}">Ver Flujo</a>
+					&rsaquo; <a href="{% url 'verUScambiarEstado' US.actividad.flujo.id US.id %}">Cambiar de Estado un US</a>
+                    &rsaquo; Dar por terminado el US
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-md-12">
+						<h3  class="list-group-item active">
+								User Story : US.nombreUS
+						</h3>
+                        Desea dar por terminado el User Story ?
+                        <form class="" method="POST">{% csrf_token %}
+                            <br>
+                            <button class="btn bg bottom-left">Aceptar</button>
+                        </form>
+                        {% if mensajeExito %}
+                            <div class="alert-success form-control" role="alert">
+                                {{ mensajeExito }}
+                            </div>
+                        {% endif %}
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

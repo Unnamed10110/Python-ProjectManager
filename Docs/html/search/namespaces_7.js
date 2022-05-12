@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['0001_5finitial',['0001_initial',['../namespaceuser_story_1_1migrations_1_10001__initial.html',1,'userStory::migrations']]],
+  ['0001_5finitial',['0001_initial',['../namespaceusuario_1_1migrations_1_10001__initial.html',1,'usuario::migrations']]],
+  ['admin',['admin',['../namespaceusuario_1_1admin.html',1,'usuario']]],
+  ['admin',['admin',['../namespaceuser_story_1_1admin.html',1,'userStory']]],
+  ['apps',['apps',['../namespaceuser_story_1_1apps.html',1,'userStory']]],
+  ['apps',['apps',['../namespaceusuario_1_1apps.html',1,'usuario']]],
+  ['forms',['forms',['../namespaceuser_story_1_1forms.html',1,'userStory']]],
+  ['forms',['forms',['../namespaceusuario_1_1forms.html',1,'usuario']]],
+  ['migrations',['migrations',['../namespaceuser_story_1_1migrations.html',1,'userStory']]],
+  ['migrations',['migrations',['../namespaceusuario_1_1migrations.html',1,'usuario']]],
+  ['models',['models',['../namespaceusuario_1_1models.html',1,'usuario']]],
+  ['models',['models',['../namespaceuser_story_1_1models.html',1,'userStory']]],
+  ['tests',['tests',['../namespaceuser_story_1_1tests.html',1,'userStory']]],
+  ['tests',['tests',['../namespaceusuario_1_1tests.html',1,'usuario']]],
+  ['userstory',['userStory',['../namespaceuser_story.html',1,'']]],
+  ['usuario',['usuario',['../namespaceusuario.html',1,'']]],
+  ['views',['views',['../namespaceusuario_1_1views.html',1,'usuario']]],
+  ['views',['views',['../namespaceuser_story_1_1views.html',1,'userStory']]]
+];

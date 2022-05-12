@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administración de Sprint
+                </li>
+                <li>
+                    <a href="{% url 'CrearSprint' proyecto.id %}" >Crear Sprint</a>
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                        <a href="{% url 'ListarSprint' proyecto.id %}" >Atrás </a>
+                    </li>
+                <li>
+                    <a href="{% url 'ver_proyecto' proyecto.id %}">Proyecto</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+					&rsaquo; Resumen de Proyecto
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+					    <h2  class="list-group-item active">
+								Nuevo Sprint
+                        </h2>
+                        {% if proyecto.estado == 'Ejecutando'%}
+                            <form action="" class="" method="POST" >{% csrf_token %}
+                                <div class="form-group ">
+                                    <label for="nombre">Nombre</label>
+                                    <input class="form-control" name="nombre" type="text" placeholder="Nombre del Sprint" required>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="nombre">Duracion</label>
+                                    <input class="form-control" name="duracion" type="number" min="1" required>
+                                </div>
+                                <button class="btn bg bottom-left" >Guardar</button>
+                                {% if mensaje %}
+                                    {% if mensaje == 'Sprint Creado Exitosamente.' %}
+                                        <div class="alert-success" role="alert">
+                                            {{ mensaje }}
+                                        </div>
+                                    {% else %}
+                                        <div class="alert-danger form-control" role="alert">
+                                            {{ mensaje }}
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            </form>
+                        {%else%}
+                            <div class=" form-control alert-warning">
+                                Para crear un Sprint debe cambiar el estado del Proyecto a 'Ejecutando'. Modifique el estado del Proyecto mediante este enlace: <a href="{% url 'modificarProyecto' proyecto.id %}">Modificar Proyecto</a>
+                            </div>
+
+                        {% endif%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

@@ -1,0 +1,64 @@
+\hypertarget{namespaceuser_story_1_1views}{}\section{Referencia del Namespace user\+Story.\+views}
+\label{namespaceuser_story_1_1views}\index{user\+Story.\+views@{user\+Story.\+views}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceuser_story_1_1views_ae6106e66b8d05689e519b72e1045e3a5}{crear\+US} (request, proyectoid)
+\item 
+def \hyperlink{namespaceuser_story_1_1views_ad0e470bc7f4055f27670115a04821d0b}{listar\+\_\+\+US} (request, proyectoid)
+\item 
+def \hyperlink{namespaceuser_story_1_1views_a11946bd0548bb2f6843af8728b2f90d0}{modificar\+US} (request, ustoryid, proyectoid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Vistas para el modelo User Story que incluye la creacion, modificacion,
+asignacion a miembros de los mismos\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones}
+\index{user\+Story\+::views@{user\+Story\+::views}!crear\+US@{crear\+US}}
+\index{crear\+US@{crear\+US}!user\+Story\+::views@{user\+Story\+::views}}
+\subsubsection[{\texorpdfstring{crear\+U\+S(request, proyectoid)}{crearUS(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Story.\+views.\+crear\+US (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_story_1_1views_ae6106e66b8d05689e519b72e1045e3a5}{}\label{namespaceuser_story_1_1views_ae6106e66b8d05689e519b72e1045e3a5}
+\begin{DoxyVerb}Crea un nuevo User Story, con los campos requeridos y las comprobaciones
+necesarias para su creacion\end{DoxyVerb}
+ 
+
+Definición en la línea 10 del archivo views.\+py.
+
+\index{user\+Story\+::views@{user\+Story\+::views}!listar\+\_\+\+US@{listar\+\_\+\+US}}
+\index{listar\+\_\+\+US@{listar\+\_\+\+US}!user\+Story\+::views@{user\+Story\+::views}}
+\subsubsection[{\texorpdfstring{listar\+\_\+\+U\+S(request, proyectoid)}{listar_US(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Story.\+views.\+listar\+\_\+\+US (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_story_1_1views_ad0e470bc7f4055f27670115a04821d0b}{}\label{namespaceuser_story_1_1views_ad0e470bc7f4055f27670115a04821d0b}
+\begin{DoxyVerb}:param proyectoid: recibe el id del proyecto al que esta asociado el User Story
+Lista todos los User Stories del Proyecto para que puedan ser elegidos por el usuario
+\end{DoxyVerb}
+ 
+
+Definición en la línea 45 del archivo views.\+py.
+
+\index{user\+Story\+::views@{user\+Story\+::views}!modificar\+US@{modificar\+US}}
+\index{modificar\+US@{modificar\+US}!user\+Story\+::views@{user\+Story\+::views}}
+\subsubsection[{\texorpdfstring{modificar\+U\+S(request, ustoryid, proyectoid)}{modificarUS(request, ustoryid, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Story.\+views.\+modificar\+US (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{ustoryid, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceuser_story_1_1views_a11946bd0548bb2f6843af8728b2f90d0}{}\label{namespaceuser_story_1_1views_a11946bd0548bb2f6843af8728b2f90d0}
+\begin{DoxyVerb}:param ustoryid, proyectoid recibe el identificador del proyecto al que esta asociado el US, y el
+identificador de US que se desea modificar
+Se modifican los campos US que son modificables y se guarda en la base de datos\end{DoxyVerb}
+ 
+
+Definición en la línea 57 del archivo views.\+py.
+

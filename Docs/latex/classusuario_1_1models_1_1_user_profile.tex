@@ -1,0 +1,120 @@
+\hypertarget{classusuario_1_1models_1_1_user_profile}{}\section{Referencia de la Clase usuario.\+models.\+User\+Profile}
+\label{classusuario_1_1models_1_1_user_profile}\index{usuario.\+models.\+User\+Profile@{usuario.\+models.\+User\+Profile}}
+Diagrama de herencias de usuario.\+models.\+User\+Profile\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classusuario_1_1models_1_1_user_profile}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classusuario_1_1models_1_1_user_profile_af29e31145afb5a85129fc3f2895ba025}{nombre\+\_\+valido} (self, nombre)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a8ef66edb95efb90536802ef5bd470f4b}{user} = models.\+One\+To\+One\+Field(User)
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a9016f06733de7a060980d1bbbdb71d6b}{direccion} = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_aa2435013de4597d25c50d0942d645b8f}{telefono} = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a12d9251950737efdaec07e682048d5c5}{captrabajo} = models.\+Integer\+Field(default=0)
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_ae243356225ccd5550d7df50a6acaecd7}{trabasignado} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a7a01376ce01bf33948434e7256ad05ff}{descripcion} = models.\+Char\+Field(max\+\_\+length=240, default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a543c141ad4b4e7d2aaf13b11393cd527}{es\+\_\+administrador} = models.\+Boolean\+Field(default=False)
+\item 
+\hyperlink{classusuario_1_1models_1_1_user_profile_a4ff0ba6c2f673bd9a51264d11d805130}{proyectos} = models.\+Many\+To\+Many\+Field(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto},default=None)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Se definen todos los atributos para que un Usuario sea identificado dentro de un sistema.\end{DoxyVerb}
+ 
+
+Definición en la línea 13 del archivo models.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!nombre\+\_\+valido@{nombre\+\_\+valido}}
+\index{nombre\+\_\+valido@{nombre\+\_\+valido}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{nombre\+\_\+valido(self, nombre)}{nombre_valido(self, nombre)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+models.\+User\+Profile.\+nombre\+\_\+valido (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{classusuario_1_1models_1_1_user_profile_af29e31145afb5a85129fc3f2895ba025}{}\label{classusuario_1_1models_1_1_user_profile_af29e31145afb5a85129fc3f2895ba025}
+\begin{DoxyVerb}verifica que el usuario no exista en la BD\end{DoxyVerb}
+ 
+
+Definición en la línea 24 del archivo models.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!captrabajo@{captrabajo}}
+\index{captrabajo@{captrabajo}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{captrabajo}{captrabajo}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+captrabajo = models.\+Integer\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a12d9251950737efdaec07e682048d5c5}{}\label{classusuario_1_1models_1_1_user_profile_a12d9251950737efdaec07e682048d5c5}
+
+
+Definición en la línea 18 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!descripcion@{descripcion}}
+\index{descripcion@{descripcion}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{descripcion}{descripcion}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+descripcion = models.\+Char\+Field(max\+\_\+length=240, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a7a01376ce01bf33948434e7256ad05ff}{}\label{classusuario_1_1models_1_1_user_profile_a7a01376ce01bf33948434e7256ad05ff}
+
+
+Definición en la línea 20 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!direccion@{direccion}}
+\index{direccion@{direccion}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{direccion}{direccion}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+direccion = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a9016f06733de7a060980d1bbbdb71d6b}{}\label{classusuario_1_1models_1_1_user_profile_a9016f06733de7a060980d1bbbdb71d6b}
+
+
+Definición en la línea 16 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!es\+\_\+administrador@{es\+\_\+administrador}}
+\index{es\+\_\+administrador@{es\+\_\+administrador}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{es\+\_\+administrador}{es_administrador}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+es\+\_\+administrador = models.\+Boolean\+Field(default=False)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a543c141ad4b4e7d2aaf13b11393cd527}{}\label{classusuario_1_1models_1_1_user_profile_a543c141ad4b4e7d2aaf13b11393cd527}
+
+
+Definición en la línea 21 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!proyectos@{proyectos}}
+\index{proyectos@{proyectos}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{proyectos}{proyectos}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+proyectos = models.\+Many\+To\+Many\+Field({\bf Proyecto},default=None)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a4ff0ba6c2f673bd9a51264d11d805130}{}\label{classusuario_1_1models_1_1_user_profile_a4ff0ba6c2f673bd9a51264d11d805130}
+
+
+Definición en la línea 22 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!telefono@{telefono}}
+\index{telefono@{telefono}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{telefono}{telefono}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+telefono = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_aa2435013de4597d25c50d0942d645b8f}{}\label{classusuario_1_1models_1_1_user_profile_aa2435013de4597d25c50d0942d645b8f}
+
+
+Definición en la línea 17 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!trabasignado@{trabasignado}}
+\index{trabasignado@{trabasignado}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{trabasignado}{trabasignado}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+trabasignado = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_ae243356225ccd5550d7df50a6acaecd7}{}\label{classusuario_1_1models_1_1_user_profile_ae243356225ccd5550d7df50a6acaecd7}
+
+
+Definición en la línea 19 del archivo models.\+py.
+
+\index{usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}!user@{user}}
+\index{user@{user}!usuario\+::models\+::\+User\+Profile@{usuario\+::models\+::\+User\+Profile}}
+\subsubsection[{\texorpdfstring{user}{user}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+models.\+User\+Profile.\+user = models.\+One\+To\+One\+Field(User)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1models_1_1_user_profile_a8ef66edb95efb90536802ef5bd470f4b}{}\label{classusuario_1_1models_1_1_user_profile_a8ef66edb95efb90536802ef5bd470f4b}
+
+
+Definición en la línea 15 del archivo models.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/usuario/\hyperlink{usuario_2models_8py}{models.\+py}\end{DoxyCompactItemize}

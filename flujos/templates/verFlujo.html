@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+{% block head%}
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $("#boton1").click(function(event) {
+            $("#actividades").load('crearFlujo.html div#listaActividades');
+        });
+        });
+    </script>
+{% endblock %}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Resumen del Flujo
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'listarFlujos' proyectoid %}">Atrás</a>
+                </li>
+               <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+               </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+					&rsaquo; Ver Flujo
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+						<h2  class="list-group-item active">
+								Flujo Kanban :
+						</h2>
+                        {% if mensajeError %}
+                        <p>
+                            No se tienen Flujos Creados.
+                        </p>
+                        {% else %}
+                            {% if Actividades %}
+                                <div class="col-md-6">
+                                  <table class="table table-bordered text-center">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="{{nroA}}" class="text-center" >{{ Flujo.nombre }}</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            {% for a in Actividades %}
+                                                <th colspan="3" ><b><i>{{a.nombre}}</i></b></th>
+                                            {% endfor %}
+                                        </tr>
+                                        <tr>
+                                            {% for a in Actividades %}
+                                                <th>POR HACER</th>
+                                                <th>HACIENDO</th>
+                                                <th>HECHO</th>
+                                            {% endfor %}
+                                        </tr>
+
+                                            {% for u in USs %}
+                                                <tr>
+                                                {% for a in Actividades %}
+                                                    {% if u.actividad.nombre == a.nombre %}
+                                                        {% if u.estado == 'Por Hacer' %}
+                                                            <td>{{u.nombreUS}}</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        {% elif u.estado == 'Haciendo' %}
+                                                            <td></td>
+                                                            <td>{{u.nombreUS}}</td>
+                                                            <td></td>
+                                                        {% elif u.estado == 'Hecho' %}
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>{{u.nombreUS}}</td>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                </tr>
+                                            {% endfor %}
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                            {% else %}
+                                <div class="alert-danger form-control" role="alert">
+                                    No tienen Actividades Creadas el Flujo
+                                </div>
+                            {% endif %}
+                            </div>
+                        </div>
+                        {% endif %}
+                            <!--
+                                <div class="form-group ">
+                                    <label for="nombre">Nombre del Flujo: {{Flujo.nombre}}</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="tpUS">Tipo de User Story: {{Flujo.tipoUS.nombre}}</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="proyecto">Proyecto : {{Flujo.proyecto.nombre}}</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="lsAct">Lista de Actividades:</label>
+                                    {% if Actividades %}
+                                        {% for a in Actividades %}
+                                            <li><label for="Actividades"> {{a.nombre}}</label></li>
+                                        {% endfor %}
+                                    {% else %}
+                                            El flujo no tiene Actividades
+                                    {% endif %}
+                                </div>
+                                <!--<div class="form-group ">
+                                    <label for="lsUS">Lista de US del Flujo:</label>
+                                    {% for u in USs %}
+                                        <label for="uss"> {{u.nombre}}</label>
+                                    {% endfor %}
+                                </div>-->
+
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+
+        <!-- /#page-content-wrapper -->
+
+
+    <!-- /#wrapper -->
+
+
+{% endblock %}

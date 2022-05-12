@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administración de Backlog
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'ListarSprint' proyectoid %}" >Atrás</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'ListarSprint' proyectoid %}" >Sprints del Proyecto</a>
+					&rsaquo; Detalles Sprint
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+
+					    <h2  class="list-group-item active">
+								Detalles Sprint
+                        </h2>
+                        <div class="form-group ">
+                            <label>Nombre: {{ sp.nombre }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Duracion: {{sp.duracion}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Estado: {{sp.estado}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Horas Disponibles: {{horas}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Miembros Asignados:</label>
+                                {%for a in usu%}
+                                    <br>
+                                    <label > - {{a.usuario}}</label>
+                                {%endfor%}
+                        </div>
+                        <div class="form-group">
+                            <label >US Asignados:</label>
+                                {%for b in us%}
+                                    <br>
+                                    <label > - {{b.nombreUS}}</label>
+                                {%endfor%}
+                        </div>
+                        <div class="form-group">
+                            <label >Flujos asociados:</label>
+                                {%for c in flu%}
+                                    <br>
+                                    <label > - {{c.nombre}}</label>
+                                {%endfor%}
+                        </div>
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock%}

@@ -1,0 +1,111 @@
+\hypertarget{classusuario_1_1forms_1_1_registro_user_form}{}\section{Referencia de la Clase usuario.\+forms.\+Registro\+User\+Form}
+\label{classusuario_1_1forms_1_1_registro_user_form}\index{usuario.\+forms.\+Registro\+User\+Form@{usuario.\+forms.\+Registro\+User\+Form}}
+Diagrama de herencias de usuario.\+forms.\+Registro\+User\+Form\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classusuario_1_1forms_1_1_registro_user_form}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classusuario_1_1forms_1_1_registro_user_form_a928eddb05230c6e54cf127b5f9f8e136}{clean\+Username} (self)
+\item 
+def \hyperlink{classusuario_1_1forms_1_1_registro_user_form_adfdd875682aed5617ef4ced4b5873382}{clean\+Email} (self)
+\item 
+def \hyperlink{classusuario_1_1forms_1_1_registro_user_form_a1abd5ab69674feaeac57eb7e22cefd5b}{clean\+Password2} (self)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classusuario_1_1forms_1_1_registro_user_form_aa7a52509d98f74c030597cb5edfec969}{username} = forms.\+Char\+Field(min\+\_\+length=5)
+\item 
+\hyperlink{classusuario_1_1forms_1_1_registro_user_form_a226074f70cfa953b71f8b76aa3e9d0f2}{email} = forms.\+Email\+Field()
+\item 
+\hyperlink{classusuario_1_1forms_1_1_registro_user_form_aae8a355143f32fae719b573908b9edd0}{password} = forms.\+Char\+Field(min\+\_\+length=5, widget=forms.\+Password\+Input())
+\item 
+\hyperlink{classusuario_1_1forms_1_1_registro_user_form_acbad77fd91e846f569ddfe7cf664afc2}{password2} = forms.\+Char\+Field(widget=forms.\+Password\+Input())
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Utiliza la autentificacion de usuario que proporciona Django. \end{DoxyVerb}
+ 
+
+Definición en la línea 5 del archivo forms.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!clean\+Email@{clean\+Email}}
+\index{clean\+Email@{clean\+Email}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{clean\+Email(self)}{cleanEmail(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+forms.\+Registro\+User\+Form.\+clean\+Email (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_adfdd875682aed5617ef4ced4b5873382}{}\label{classusuario_1_1forms_1_1_registro_user_form_adfdd875682aed5617ef4ced4b5873382}
+\begin{DoxyVerb}Comprueba que no exista un email igual en la db\end{DoxyVerb}
+ 
+
+Definición en la línea 20 del archivo forms.\+py.
+
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!clean\+Password2@{clean\+Password2}}
+\index{clean\+Password2@{clean\+Password2}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{clean\+Password2(self)}{cleanPassword2(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+forms.\+Registro\+User\+Form.\+clean\+Password2 (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_a1abd5ab69674feaeac57eb7e22cefd5b}{}\label{classusuario_1_1forms_1_1_registro_user_form_a1abd5ab69674feaeac57eb7e22cefd5b}
+\begin{DoxyVerb}Comprueba que password y password2 sean iguales.\end{DoxyVerb}
+ 
+
+Definición en la línea 27 del archivo forms.\+py.
+
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!clean\+Username@{clean\+Username}}
+\index{clean\+Username@{clean\+Username}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{clean\+Username(self)}{cleanUsername(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+forms.\+Registro\+User\+Form.\+clean\+Username (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_a928eddb05230c6e54cf127b5f9f8e136}{}\label{classusuario_1_1forms_1_1_registro_user_form_a928eddb05230c6e54cf127b5f9f8e136}
+\begin{DoxyVerb}Comprueba que no exista un username igual en la db\end{DoxyVerb}
+ 
+
+Definición en la línea 13 del archivo forms.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!email@{email}}
+\index{email@{email}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{email}{email}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+forms.\+Registro\+User\+Form.\+email = forms.\+Email\+Field()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_a226074f70cfa953b71f8b76aa3e9d0f2}{}\label{classusuario_1_1forms_1_1_registro_user_form_a226074f70cfa953b71f8b76aa3e9d0f2}
+
+
+Definición en la línea 8 del archivo forms.\+py.
+
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!password@{password}}
+\index{password@{password}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{password}{password}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+forms.\+Registro\+User\+Form.\+password = forms.\+Char\+Field(min\+\_\+length=5, widget=forms.\+Password\+Input())\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_aae8a355143f32fae719b573908b9edd0}{}\label{classusuario_1_1forms_1_1_registro_user_form_aae8a355143f32fae719b573908b9edd0}
+
+
+Definición en la línea 9 del archivo forms.\+py.
+
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!password2@{password2}}
+\index{password2@{password2}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{password2}{password2}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+forms.\+Registro\+User\+Form.\+password2 = forms.\+Char\+Field(widget=forms.\+Password\+Input())\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_acbad77fd91e846f569ddfe7cf664afc2}{}\label{classusuario_1_1forms_1_1_registro_user_form_acbad77fd91e846f569ddfe7cf664afc2}
+
+
+Definición en la línea 10 del archivo forms.\+py.
+
+\index{usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}!username@{username}}
+\index{username@{username}!usuario\+::forms\+::\+Registro\+User\+Form@{usuario\+::forms\+::\+Registro\+User\+Form}}
+\subsubsection[{\texorpdfstring{username}{username}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+forms.\+Registro\+User\+Form.\+username = forms.\+Char\+Field(min\+\_\+length=5)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1forms_1_1_registro_user_form_aa7a52509d98f74c030597cb5edfec969}{}\label{classusuario_1_1forms_1_1_registro_user_form_aa7a52509d98f74c030597cb5edfec969}
+
+
+Definición en la línea 7 del archivo forms.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/usuario/\hyperlink{usuario_2forms_8py}{forms.\+py}\end{DoxyCompactItemize}

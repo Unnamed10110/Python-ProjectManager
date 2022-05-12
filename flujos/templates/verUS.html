@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administración de Backlog
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'verFlujo' flujo.id %}">Atrás</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+                    &rsaquo; <a href="{% url 'verFlujo' flujo.id %}">Ver Flujo</a>
+					&rsaquo; Cambiar Estado US
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+
+					    <h2  class="list-group-item active">
+								Resumen de User Story {{ uStory.nombreUS }}
+                        </h2>
+                        <form class="" method="POST">
+                            {% csrf_token %}
+                        <div class="form-group ">
+                            <label>Nombre: {{ uStory.nombreUS }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Usuario Encargado: {{uStory.usuario_asignado.user.username}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Prioridad: {{uStory.prioridad}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Tiempo estimado: {{uStory.tiempo_planificado}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Sprint Asociado: {{uStory.sprint.nombre}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label >Tipo de User Story: {{uStory.tipoUS.nombre}}</label>
+                        </div>
+                        <div class="form-group ">
+                            <label >Notas: {{uStory.notas}}</label>
+                        </div>
+                        <div class="form-group ">
+                            <label >Descripcion Corta: {{uStory.descripcion_corta}}</label>
+                        </div>
+                        <div class="form-group ">
+                            <label >Descripcion Larga: {{uStory.descripcion_larga}}</label>
+                        </div>
+                            {% if user == uStory.usuario_asignado.user %}
+                                <button class="btn bg bottom-left" name="boton" value="cambiar">Cambiar de Estado</button>
+                            {% endif %}
+                            {% if perms.flujos.crear_flujo and usStory.estado == 'Hecho'%}
+                                <button class="btn bg bottom-left" name="boton" value="retroceder">Retrocer US</button>
+                            {% endif %}
+                        </form>
+                        {% if mensaje %}
+                            <div class="alert-warning" role="alert">
+                                {{ mensaje }}
+                            </div>
+                        {% endif %}
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock%}

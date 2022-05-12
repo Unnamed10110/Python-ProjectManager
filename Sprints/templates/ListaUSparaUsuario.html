@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title%} SGP {% endblock%}
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administracion de Sprint
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                 </li>
+                <li>
+                    <a href="{% url 'ListarSprint' proyectoid %}" >Atras</a>
+                </li>
+                 <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Proyecto</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+                    &rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; <a href="{% url 'ListarSprint' proyectoid %}" >Sprints del Proyecto</a>
+                    &rsaquo; US del Sprint
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-6">
+                            <h2  class="list-group-item active">
+                                    Asignar US a Usuario
+                            </h2>
+                            {% if lis_us %}
+                                <table>
+                                {% for us in lis_us %}
+                                    <tr>
+                                        <th scope="row"> {{ us.nombreUS }}</th>
+                                        <td> <a class ="add" href="{% url 'ElegirMiembroUS' us.id proyectoid sprintid%}"> Asignar </a></td>
+                                    </tr>
+                                {% endfor %}
+                                </table>
+                            {% else %}
+                                 {% if not li  %}
+                                     <div class="alert-warning form-control">No hay US asignados al Sprint</div>
+                                 {% else %}
+                                     <div class="alert-warning form-control">Todos los US ya fueron asignados al Sprint</div>
+                                 {% endif %}
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-6">
+                            <h2  class="list-group-item active">
+                                Desasignar US a Usuario
+                            </h2>
+                            {% if li %}
+                                <table>
+                                {% for usu in li %}
+                                    <tr>
+                                        <th scope="row"> {{ usu.nombreUS }} Asignado a : {{ usu.usuario_asignado.user.first_name}} {{ usu.usuario_asignado.user.last_name}}</th>
+                                         <td scope ="row"> <a class ="add" href="{% url 'desasignarUS' usu.id proyectoid sprintid%}"> Desasignar </a></td>
+                                    </tr>
+                                {% endfor %}
+                                </table>
+                            {% else %}
+                                <div class="alert-warning form-control">No hay US asignados al Sprint</div>
+                            {% endif %}
+                        </div>
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+{% endblock%}

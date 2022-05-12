@@ -1,0 +1,367 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[spanish]{babel}
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Gestor Proyectos }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.8.11}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{R\+E\+A\+D\+ME}
+\label{md_C:_GestorProyectos_README}
+\hypertarget{md_C:_GestorProyectos_README}{}
+\input{md_C:_GestorProyectos_README}
+\chapter{Indice de namespaces}
+\input{namespaces}
+\chapter{Indice jerárquico}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de namespaces}
+\input{namespaceflujos}
+\input{namespaceflujos_1_1admin}
+\input{namespaceflujos_1_1apps}
+\input{namespaceflujos_1_1migrations}
+\input{namespaceflujos_1_1migrations_1_10001__initial}
+\input{namespaceflujos_1_1models}
+\input{namespaceflujos_1_1tests}
+\input{namespaceflujos_1_1views}
+\input{namespace_gestor_proyectos}
+\input{namespace_gestor_proyectos_1_1forms}
+\input{namespace_gestor_proyectos_1_1settings}
+\input{namespace_gestor_proyectos_1_1settings_1_1base}
+\input{namespace_gestor_proyectos_1_1settings_1_1development}
+\input{namespace_gestor_proyectos_1_1settings_1_1production}
+\input{namespace_gestor_proyectos_1_1urls}
+\input{namespace_gestor_proyectos_1_1views}
+\input{namespace_gestor_proyectos_1_1wsgi}
+\input{namespacelogin}
+\input{namespacelogin_1_1admin}
+\input{namespacelogin_1_1apps}
+\input{namespacelogin_1_1forms}
+\input{namespacelogin_1_1migrations}
+\input{namespacelogin_1_1models}
+\input{namespacelogin_1_1tests}
+\input{namespacelogin_1_1views}
+\input{namespacemanage}
+\input{namespaceproyectos}
+\input{namespaceproyectos_1_1admin}
+\input{namespaceproyectos_1_1apps}
+\input{namespaceproyectos_1_1forms}
+\input{namespaceproyectos_1_1migrations}
+\input{namespaceproyectos_1_1migrations_1_10001__initial}
+\input{namespaceproyectos_1_1migrations_1_10002__auto__20160610__1357}
+\input{namespaceproyectos_1_1migrations_1_10003__auto__20160610__2156}
+\input{namespaceproyectos_1_1models}
+\input{namespaceproyectos_1_1tests}
+\input{namespaceproyectos_1_1views}
+\input{namespace_sprints}
+\input{namespace_sprints_1_1admin}
+\input{namespace_sprints_1_1apps}
+\input{namespace_sprints_1_1forms}
+\input{namespace_sprints_1_1migrations}
+\input{namespace_sprints_1_1migrations_1_10001__initial}
+\input{namespace_sprints_1_1migrations_1_10002__auto__20160610__1357}
+\input{namespace_sprints_1_1migrations_1_10003__auto__20160610__2303}
+\input{namespace_sprints_1_1migrations_1_10004__auto__20160630__1356}
+\input{namespace_sprints_1_1models}
+\input{namespace_sprints_1_1tests}
+\input{namespace_sprints_1_1views}
+\input{namespacetipo_u_s}
+\input{namespacetipo_u_s_1_1admin}
+\input{namespacetipo_u_s_1_1apps}
+\input{namespacetipo_u_s_1_1forms}
+\input{namespacetipo_u_s_1_1migrations}
+\input{namespacetipo_u_s_1_1migrations_1_10001__initial}
+\input{namespacetipo_u_s_1_1models}
+\input{namespacetipo_u_s_1_1tests}
+\input{namespacetipo_u_s_1_1views}
+\input{namespacetry-log}
+\input{namespaceuser_story}
+\input{namespaceuser_story_1_1admin}
+\input{namespaceuser_story_1_1apps}
+\input{namespaceuser_story_1_1forms}
+\input{namespaceuser_story_1_1migrations}
+\input{namespaceuser_story_1_1migrations_1_10001__initial}
+\input{namespaceuser_story_1_1models}
+\input{namespaceuser_story_1_1tests}
+\input{namespaceuser_story_1_1views}
+\input{namespaceusuario}
+\input{namespaceusuario_1_1admin}
+\input{namespaceusuario_1_1apps}
+\input{namespaceusuario_1_1forms}
+\input{namespaceusuario_1_1migrations}
+\input{namespaceusuario_1_1migrations_1_10001__initial}
+\input{namespaceusuario_1_1models}
+\input{namespaceusuario_1_1tests}
+\input{namespaceusuario_1_1views}
+\chapter{Documentación de las clases}
+\input{classflujos_1_1models_1_1_actividades}
+\input{classusuario_1_1forms_1_1cambiocontra}
+\input{classusuario_1_1forms_1_1eliminarusuarios}
+\input{classflujos_1_1models_1_1_flujos}
+\input{classflujos_1_1apps_1_1_flujos_config}
+\input{classflujos_1_1tests_1_1_flujos_models_test}
+\input{class_sprints_1_1tests_1_1_flujos_models_test}
+\input{classlogin_1_1forms_1_1loginform}
+\input{class_gestor_proyectos_1_1forms_1_1loginform}
+\input{classlogin_1_1tests_1_1_login_test_case}
+\input{classlogin_1_1apps_1_1_loguear_config}
+\input{classflujos_1_1migrations_1_10001__initial_1_1_migration}
+\input{classuser_story_1_1migrations_1_10001__initial_1_1_migration}
+\input{classusuario_1_1migrations_1_10001__initial_1_1_migration}
+\input{class_sprints_1_1migrations_1_10001__initial_1_1_migration}
+\input{class_sprints_1_1migrations_1_10002__auto__20160610__1357_1_1_migration}
+\input{class_sprints_1_1migrations_1_10003__auto__20160610__2303_1_1_migration}
+\input{class_sprints_1_1migrations_1_10004__auto__20160630__1356_1_1_migration}
+\input{classproyectos_1_1migrations_1_10001__initial_1_1_migration}
+\input{classproyectos_1_1migrations_1_10002__auto__20160610__1357_1_1_migration}
+\input{classproyectos_1_1migrations_1_10003__auto__20160610__2156_1_1_migration}
+\input{classtipo_u_s_1_1migrations_1_10001__initial_1_1_migration}
+\input{classproyectos_1_1models_1_1_proyecto}
+\input{classproyectos_1_1models_1_1_proyecto___user___rol}
+\input{classproyectos_1_1forms_1_1_proyecto_form}
+\input{classproyectos_1_1apps_1_1_proyectos_config}
+\input{classproyectos_1_1tests_1_1_proyectos_views_test}
+\input{classusuario_1_1forms_1_1_registro_user_form}
+\input{class_sprints_1_1models_1_1_sprint}
+\input{class_sprints_1_1models_1_1_sprint___usuarios}
+\input{class_sprints_1_1apps_1_1_sprint_config}
+\input{classtipo_u_s_1_1models_1_1tipo__us}
+\input{classtipo_u_s_1_1forms_1_1tipo__us_form}
+\input{classtipo_u_s_1_1apps_1_1_tipous_config}
+\input{classtipo_u_s_1_1tests_1_1_tipo_u_s_models_test}
+\input{classusuario_1_1models_1_1_user_profile}
+\input{classuser_story_1_1models_1_1_user_stories}
+\input{classuser_story_1_1apps_1_1_userstory_config}
+\input{classuser_story_1_1tests_1_1user_story_models_test}
+\input{classusuario_1_1apps_1_1_usuario_config}
+\input{classusuario_1_1tests_1_1_usuario_test_case}
+\chapter{Documentación de archivos}
+\input{flujos_2____init_____8py}
+\input{flujos_2migrations_2____init_____8py}
+\input{_gestor_proyectos_2____init_____8py}
+\input{_gestor_proyectos_2settings_2____init_____8py}
+\input{login_2____init_____8py}
+\input{login_2migrations_2____init_____8py}
+\input{proyectos_2____init_____8py}
+\input{proyectos_2migrations_2____init_____8py}
+\input{_sprints_2____init_____8py}
+\input{_sprints_2migrations_2____init_____8py}
+\input{tipo_u_s_2____init_____8py}
+\input{tipo_u_s_2migrations_2____init_____8py}
+\input{user_story_2____init_____8py}
+\input{user_story_2migrations_2____init_____8py}
+\input{usuario_2____init_____8py}
+\input{usuario_2migrations_2____init_____8py}
+\input{flujos_2admin_8py}
+\input{login_2admin_8py}
+\input{proyectos_2admin_8py}
+\input{_sprints_2admin_8py}
+\input{tipo_u_s_2admin_8py}
+\input{user_story_2admin_8py}
+\input{usuario_2admin_8py}
+\input{flujos_2apps_8py}
+\input{login_2apps_8py}
+\input{proyectos_2apps_8py}
+\input{_sprints_2apps_8py}
+\input{tipo_u_s_2apps_8py}
+\input{user_story_2apps_8py}
+\input{usuario_2apps_8py}
+\input{flujos_2migrations_20001__initial_8py}
+\input{proyectos_2migrations_20001__initial_8py}
+\input{_sprints_2migrations_20001__initial_8py}
+\input{tipo_u_s_2migrations_20001__initial_8py}
+\input{user_story_2migrations_20001__initial_8py}
+\input{usuario_2migrations_20001__initial_8py}
+\input{flujos_2models_8py}
+\input{login_2models_8py}
+\input{proyectos_2models_8py}
+\input{_sprints_2models_8py}
+\input{tipo_u_s_2models_8py}
+\input{user_story_2models_8py}
+\input{usuario_2models_8py}
+\input{flujos_2tests_8py}
+\input{login_2tests_8py}
+\input{proyectos_2tests_8py}
+\input{_sprints_2tests_8py}
+\input{tipo_u_s_2tests_8py}
+\input{user_story_2tests_8py}
+\input{usuario_2tests_8py}
+\input{flujos_2views_8py}
+\input{_gestor_proyectos_2views_8py}
+\input{login_2views_8py}
+\input{proyectos_2views_8py}
+\input{_sprints_2views_8py}
+\input{tipo_u_s_2views_8py}
+\input{user_story_2views_8py}
+\input{usuario_2views_8py}
+\input{_gestor_proyectos_2forms_8py}
+\input{login_2forms_8py}
+\input{proyectos_2forms_8py}
+\input{_sprints_2forms_8py}
+\input{tipo_u_s_2forms_8py}
+\input{user_story_2forms_8py}
+\input{usuario_2forms_8py}
+\input{settings_8py}
+\input{base_8py}
+\input{development_8py}
+\input{production_8py}
+\input{urls_8py}
+\input{wsgi_8py}
+\input{try-log_8py}
+\input{manage_8py}
+\input{proyectos_2migrations_20002__auto__20160610__1357_8py}
+\input{_sprints_2migrations_20002__auto__20160610__1357_8py}
+\input{0003__auto__20160610__2156_8py}
+\input{_r_e_a_d_m_e_8md}
+\input{0003__auto__20160610__2303_8py}
+\input{0004__auto__20160630__1356_8py}
+\input{bootstrap_8js}
+\input{bootstrap_8min_8js}
+\input{npm_8js}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Índice}
+\printindex
+
+\end{document}

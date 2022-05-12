@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title%} SGP {% endblock%}
+{% block body%}
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                 <li class="sidebar-brand">
+                        Administración de Proyecto
+                </li>
+				 <li>
+                    <a href="{% url 'modificarProyecto' proyecto.id %}" >Modificar Proyecto</a>
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Atrás</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyecto.id %}">Resumen de Proyecto</a>
+					&rsaquo; Modificar Proyecto
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+					<div class="col-lg-12">
+						<h3  class="list-group-item active">
+						   Modificar Proyecto
+						</h3>
+						{% if proyecto.estado == 'Finalizado' %}
+							<div class="alert-danger form-control" role="alert">
+								El proyecto ha sido Finalizado - No se permiten modificaciones
+							</div>
+						{% else %}
+							<form action="" class="" method="POST" >{% csrf_token %}
+								<div class="form-group ">
+									<label for="nombre">Nombre: {{proyecto.nombre}}</label>
+								</div>
+								<div class="form-group ">
+									<label for="scrum">Scrum Master: {{proyecto.scrum_master}}</label>
+								</div>
+								{% if proyecto.estado != 'Ejecutando' %}
+									<div class="form-group">
+										<label for="FechaInicio" class="date-icon">Fecha Inicio</label>
+										<input type="date" id="FechaInicio" class="form-control" name= "FechaInicio" value="{{fi1}}-{{fi2}}-{{fi3}}">
+									</div>
+								{%endif%}
+								<div class="form-group ">
+									<label for="FechaFin" class="date-icon">Fecha Fin</label>
+									<input class="form-control" id="FechaFin" name="FechaFin" type="date"  value="{{ff1}}-{{ff2}}-{{ff3}}">
+								</div>
+								<div class="form-group ">
+										<label for="option">Estado</label>
+										<select class="form-control" name="estado" id="option" >
+											<option value="{{proyecto.estado}}">{{proyecto.estado}}</option>
+											<option value="-----------">-----------</option>
+											<option value="Pendiente">Pendiente</option>
+											<option value="Ejecutando">Ejecutando</option>
+											<option value="Finalizado">Finalizado</option>
+											<option value="Cancelado">Cancelado</option>
+										</select>
+								</div>
+								<button class="btn bg bottom-left" >Guardar</button>
+								{% if mensaje == "No puede cambiar el estado de Pendiente a Finalizado" %}
+									<div class="alert-danger form-control" role="alert">
+										{{ mensaje }}
+									</div>
+								{% endif%}
+								{% if mensaje == "No puede cambiar el estado de Ejecutando a Pendiente" %}
+									<div class="alert-danger form-control" role="alert">
+										{{ mensaje }}
+									</div>
+								{% else%}
+									{% if mensaje != "No puede cambiar el estado de Pendiente a Finalizado" and mensaje %}
+										<div class="alert-danger form-control" role="alert">
+											{{ mensaje }}
+										</div>
+									{% endif %}
+								{% endif %}
+							{% endif %}
+						   {% if mensaje2 %}
+								<div class="alert-success form-control" role="alert">
+								  {{ mensaje2 }}
+								</div>
+						   {% endif %}
+					   </form>
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+{% endblock%}
+

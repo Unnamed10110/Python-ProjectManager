@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administracion de US
+                </li>
+                {% if perms.userStory.crear_us%}
+                    <li>
+                        <a href="{% url 'CrearUS' proyectoid %}" >Crear User Story</a>
+                    </li>
+                {%endif%}
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Atrás</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; US del Proyecto
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+
+					    <h2  class="list-group-item active">
+								User Stories del Proyecto
+                        </h2>
+                        {% if lista_us %}
+                        <table>
+                            {% for us in lista_us %}
+                                <tr>
+                                    <th scope="row"> {{ us.nombreUS }}</th>
+                                    {% if perms.userStory.crear_us%}
+                                        <td> <a class ="addlink" href="{% url 'ModificarUS' us.id proyectoid %}"> Modificar </a></td>
+                                        {% endif %}
+                                </tr>
+                                {% endfor %}
+                        </table>
+                        {% else%}
+                            <div class="alert-warning form-control">
+                                No hay US Creados para el proyecto
+                            </div>
+					    {% endif %}
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock%}

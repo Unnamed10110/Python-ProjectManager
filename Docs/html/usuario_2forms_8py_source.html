@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Gestor Proyectos: Fichero Fuente C:/GestorProyectos/usuario/forms.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Gestor Proyectos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_39a25f4104f8ef1c4b8d91ff0d1fd2af.html">GestorProyectos</a></li><li class="navelem"><a class="el" href="dir_c93e36f99cac5c6dbe1645bb70c09ebf.html">usuario</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">forms.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="usuario_2forms_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceusuario_1_1forms.html">    1</a></span>&#160;<span class="keyword">from</span> django <span class="keyword">import</span> forms</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classusuario_1_1forms_1_1_registro_user_form.html">RegistroUserForm</a>(forms.Form):</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Utiliza la autentificacion de usuario que proporciona Django. &#39;&#39;&#39;</span></div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#aa7a52509d98f74c030597cb5edfec969">    7</a></span>&#160;    username = forms.CharField(min_length=5)</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#a226074f70cfa953b71f8b76aa3e9d0f2">    8</a></span>&#160;    email = forms.EmailField()</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#aae8a355143f32fae719b573908b9edd0">    9</a></span>&#160;    password = forms.CharField(min_length=5, widget=forms.PasswordInput())</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#acbad77fd91e846f569ddfe7cf664afc2">   10</a></span>&#160;    password2 = forms.CharField(widget=forms.PasswordInput())</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">#photo = forms.ImageField(required=False)</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#a928eddb05230c6e54cf127b5f9f8e136">   13</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classusuario_1_1forms_1_1_registro_user_form.html#a928eddb05230c6e54cf127b5f9f8e136">cleanUsername</a>(self):</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Comprueba que no exista un username igual en la db&quot;&quot;&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        username = self.cleaned_data[<span class="stringliteral">&#39;username&#39;</span>]</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span> User.objects.filter(username=username):</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">raise</span> forms.ValidationError(<span class="stringliteral">&#39;Nombre de usuario ya registrado.&#39;</span>)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> username</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#adfdd875682aed5617ef4ced4b5873382">   20</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classusuario_1_1forms_1_1_registro_user_form.html#adfdd875682aed5617ef4ced4b5873382">cleanEmail</a>(self):</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Comprueba que no exista un email igual en la db&quot;&quot;&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        email = self.cleaned_data[<span class="stringliteral">&#39;email&#39;</span>]</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> User.objects.filter(email=email):</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">raise</span> forms.ValidationError(<span class="stringliteral">&#39;Ya existe un email igual en la db.&#39;</span>)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> email</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1_registro_user_form.html#a1abd5ab69674feaeac57eb7e22cefd5b">   27</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classusuario_1_1forms_1_1_registro_user_form.html#a1abd5ab69674feaeac57eb7e22cefd5b">cleanPassword2</a>(self):</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Comprueba que password y password2 sean iguales.&quot;&quot;&quot;</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        password = self.cleaned_data[<span class="stringliteral">&#39;password&#39;</span>]</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        password2 = self.cleaned_data[<span class="stringliteral">&#39;password2&#39;</span>]</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> password != password2:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">raise</span> forms.ValidationError(<span class="stringliteral">&#39;Las contrasenhas no coinciden.&#39;</span>)</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> password2</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1cambiocontra.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classusuario_1_1forms_1_1cambiocontra.html">cambiocontra</a>(forms.Form):</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1cambiocontra.html#ad87c4cc32bc763f4fc67f6d583aacb10">   38</a></span>&#160;    passanterior = forms.CharField(min_length=5, widget=forms.PasswordInput())</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1cambiocontra.html#a94c9c70a31c69534c05b871a0b92d574">   39</a></span>&#160;    password1 = forms.CharField(min_length=5, widget=forms.PasswordInput())</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1cambiocontra.html#a7bcc3d86de533f3dc7ce291b037aa791">   40</a></span>&#160;    password2 = forms.CharField(widget=forms.PasswordInput())</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1eliminarusuarios.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classusuario_1_1forms_1_1eliminarusuarios.html">eliminarusuarios</a>:</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1eliminarusuarios.html#a11c4733a1499a690090fef31269bd828">   43</a></span>&#160;    username = forms.CharField(min_length=5)</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classusuario_1_1forms_1_1eliminarusuarios.html#a438ad14c23d4c78d1a5a559b17c55ed2">   44</a></span>&#160;    email = forms.EmailField()</div><div class="ttc" id="classusuario_1_1forms_1_1_registro_user_form_html"><div class="ttname"><a href="classusuario_1_1forms_1_1_registro_user_form.html">usuario.forms.RegistroUserForm</a></div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00005">forms.py:5</a></div></div>
+<div class="ttc" id="classusuario_1_1forms_1_1_registro_user_form_html_a928eddb05230c6e54cf127b5f9f8e136"><div class="ttname"><a href="classusuario_1_1forms_1_1_registro_user_form.html#a928eddb05230c6e54cf127b5f9f8e136">usuario.forms.RegistroUserForm.cleanUsername</a></div><div class="ttdeci">def cleanUsername(self)</div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00013">forms.py:13</a></div></div>
+<div class="ttc" id="classusuario_1_1forms_1_1_registro_user_form_html_adfdd875682aed5617ef4ced4b5873382"><div class="ttname"><a href="classusuario_1_1forms_1_1_registro_user_form.html#adfdd875682aed5617ef4ced4b5873382">usuario.forms.RegistroUserForm.cleanEmail</a></div><div class="ttdeci">def cleanEmail(self)</div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00020">forms.py:20</a></div></div>
+<div class="ttc" id="classusuario_1_1forms_1_1eliminarusuarios_html"><div class="ttname"><a href="classusuario_1_1forms_1_1eliminarusuarios.html">usuario.forms.eliminarusuarios</a></div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00042">forms.py:42</a></div></div>
+<div class="ttc" id="classusuario_1_1forms_1_1_registro_user_form_html_a1abd5ab69674feaeac57eb7e22cefd5b"><div class="ttname"><a href="classusuario_1_1forms_1_1_registro_user_form.html#a1abd5ab69674feaeac57eb7e22cefd5b">usuario.forms.RegistroUserForm.cleanPassword2</a></div><div class="ttdeci">def cleanPassword2(self)</div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00027">forms.py:27</a></div></div>
+<div class="ttc" id="classusuario_1_1forms_1_1cambiocontra_html"><div class="ttname"><a href="classusuario_1_1forms_1_1cambiocontra.html">usuario.forms.cambiocontra</a></div><div class="ttdef"><b>Definition:</b> <a href="usuario_2forms_8py_source.html#l00037">forms.py:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

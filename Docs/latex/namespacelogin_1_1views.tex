@@ -1,0 +1,144 @@
+\hypertarget{namespacelogin_1_1views}{}\section{Referencia del Namespace login.\+views}
+\label{namespacelogin_1_1views}\index{login.\+views@{login.\+views}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacelogin_1_1views_afeb91ea74ffd5f2354f31bbf94e65218}{login\+\_\+page} (request)
+\item 
+def \hyperlink{namespacelogin_1_1views_a915497321b9913ec88587f3400060710}{homepage} (request)
+\item 
+def \hyperlink{namespacelogin_1_1views_a841392ce41f9a1a7ed73c13351df3e04}{salir} (request)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelogin_1_1views_aaba2d069f0d21c0a150af80d325008ed}{administrador}
+\item 
+\hyperlink{namespacelogin_1_1views_ad657bf3c7d1a44c0ed8480dd3a85d3a0}{a1}
+\item 
+\hyperlink{namespacelogin_1_1views_ab24adc98866e72de9e5f2b9ad4839479}{name}
+\item 
+\hyperlink{namespacelogin_1_1views_aa576a84ccb04a71c098abd2d73c13426}{ct\+\_\+proyecto} = Content\+Type.\+objects.\+get\+\_\+for\+\_\+model(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto})
+\item 
+\hyperlink{namespacelogin_1_1views_aea88f2bb6aebe83405fe86f680e9b7a7}{permiso}
+\item 
+\hyperlink{namespacelogin_1_1views_a62e13e2b774e30419cb19970d7a58971}{p}
+\item 
+\hyperlink{namespacelogin_1_1views_aead93f923e331e0e7fc64aa3d6847cc6}{codename}
+\item 
+\hyperlink{namespacelogin_1_1views_a7bb6fd14fbead19f97d7ba9c9665fef2}{content\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}En esta porcion de codigo se realizan las comprobaciones para cada sesion del usuario, entrar
+al sistema, salir del sistema e ingresar a la Pagina principal \end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones}
+\index{login\+::views@{login\+::views}!homepage@{homepage}}
+\index{homepage@{homepage}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{homepage(request)}{homepage(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def login.\+views.\+homepage (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacelogin_1_1views_a915497321b9913ec88587f3400060710}{}\label{namespacelogin_1_1views_a915497321b9913ec88587f3400060710}
+\begin{DoxyVerb}    :param Recibe una solicitud de conexion con el servidor
+    :return PagPricipal.html
+    Si el usuario fue logueado correctamente, se lo redirige a la pagina principal del Sistema,
+    con los permisos correspondientes de tal usuario
+\end{DoxyVerb}
+ 
+
+Definición en la línea 106 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!login\+\_\+page@{login\+\_\+page}}
+\index{login\+\_\+page@{login\+\_\+page}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{login\+\_\+page(request)}{login_page(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def login.\+views.\+login\+\_\+page (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacelogin_1_1views_afeb91ea74ffd5f2354f31bbf94e65218}{}\label{namespacelogin_1_1views_afeb91ea74ffd5f2354f31bbf94e65218}
+\begin{DoxyVerb}    :param Recibe una solicitud de conexion con el servidor
+    :return login.html
+    Redirige a la pag de Logueo donde se comprueba si el usuario ingreso sus datos correctamente,
+    si esta activo en el sistema, y si sus datos se encuentran en la base de datos
+\end{DoxyVerb}
+ 
+
+Definición en la línea 71 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!salir@{salir}}
+\index{salir@{salir}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{salir(request)}{salir(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def login.\+views.\+salir (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacelogin_1_1views_a841392ce41f9a1a7ed73c13351df3e04}{}\label{namespacelogin_1_1views_a841392ce41f9a1a7ed73c13351df3e04}
+\begin{DoxyVerb}    :param Recibe una solicitud de conexion con el servidor
+    :return redireccion a la vista login
+    Cierra la sesion del usuario, y lo redirige a la pag de login
+\end{DoxyVerb}
+ 
+
+Definición en la línea 119 del archivo views.\+py.
+
+
+
+\subsection{Documentación de las variables}
+\index{login\+::views@{login\+::views}!a1@{a1}}
+\index{a1@{a1}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{a1}{a1}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+a1}\hypertarget{namespacelogin_1_1views_ad657bf3c7d1a44c0ed8480dd3a85d3a0}{}\label{namespacelogin_1_1views_ad657bf3c7d1a44c0ed8480dd3a85d3a0}
+
+
+Definición en la línea 12 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!administrador@{administrador}}
+\index{administrador@{administrador}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{administrador}{administrador}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+administrador}\hypertarget{namespacelogin_1_1views_aaba2d069f0d21c0a150af80d325008ed}{}\label{namespacelogin_1_1views_aaba2d069f0d21c0a150af80d325008ed}
+
+
+Definición en la línea 12 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!codename@{codename}}
+\index{codename@{codename}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{codename}{codename}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+codename}\hypertarget{namespacelogin_1_1views_aead93f923e331e0e7fc64aa3d6847cc6}{}\label{namespacelogin_1_1views_aead93f923e331e0e7fc64aa3d6847cc6}
+
+
+Definición en la línea 70 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!content\+\_\+type@{content\+\_\+type}}
+\index{content\+\_\+type@{content\+\_\+type}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{content\+\_\+type}{content_type}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+content\+\_\+type}\hypertarget{namespacelogin_1_1views_a7bb6fd14fbead19f97d7ba9c9665fef2}{}\label{namespacelogin_1_1views_a7bb6fd14fbead19f97d7ba9c9665fef2}
+
+
+Definición en la línea 70 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!ct\+\_\+proyecto@{ct\+\_\+proyecto}}
+\index{ct\+\_\+proyecto@{ct\+\_\+proyecto}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{ct\+\_\+proyecto}{ct_proyecto}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+ct\+\_\+proyecto = Content\+Type.\+objects.\+get\+\_\+for\+\_\+model({\bf Proyecto})}\hypertarget{namespacelogin_1_1views_aa576a84ccb04a71c098abd2d73c13426}{}\label{namespacelogin_1_1views_aa576a84ccb04a71c098abd2d73c13426}
+
+
+Definición en la línea 69 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!name@{name}}
+\index{name@{name}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+name}\hypertarget{namespacelogin_1_1views_ab24adc98866e72de9e5f2b9ad4839479}{}\label{namespacelogin_1_1views_ab24adc98866e72de9e5f2b9ad4839479}
+
+
+Definición en la línea 12 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!p@{p}}
+\index{p@{p}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+p}\hypertarget{namespacelogin_1_1views_a62e13e2b774e30419cb19970d7a58971}{}\label{namespacelogin_1_1views_a62e13e2b774e30419cb19970d7a58971}
+
+
+Definición en la línea 70 del archivo views.\+py.
+
+\index{login\+::views@{login\+::views}!permiso@{permiso}}
+\index{permiso@{permiso}!login\+::views@{login\+::views}}
+\subsubsection[{\texorpdfstring{permiso}{permiso}}]{\setlength{\rightskip}{0pt plus 5cm}login.\+views.\+permiso}\hypertarget{namespacelogin_1_1views_aea88f2bb6aebe83405fe86f680e9b7a7}{}\label{namespacelogin_1_1views_aea88f2bb6aebe83405fe86f680e9b7a7}
+
+
+Definición en la línea 70 del archivo views.\+py.
+

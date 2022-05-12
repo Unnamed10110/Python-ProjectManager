@@ -1,0 +1,162 @@
+\hypertarget{namespaceusuario_1_1views}{}\section{Referencia del Namespace usuario.\+views}
+\label{namespaceusuario_1_1views}\index{usuario.\+views@{usuario.\+views}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceusuario_1_1views_a3a696649b1a5dee50690bd74484d03f7}{registrousuario} (request)
+\item 
+def \hyperlink{namespaceusuario_1_1views_a7f223bba6a608a3d766fde36feaadde0}{Validate\+Email} (email)
+\item 
+def \hyperlink{namespaceusuario_1_1views_aea38fe57150e943bb6d5491afb6469d3}{cambiarcontrasena} (request)
+\item 
+def \hyperlink{namespaceusuario_1_1views_a0db98f64c23eb4d8108c3dbd2479c96c}{listaruser} (request)
+\item 
+def \hyperlink{namespaceusuario_1_1views_a5dde06470e472a111dfeb03e0c0b08e9}{eliminaruser} (request, usuid)
+\item 
+def \hyperlink{namespaceusuario_1_1views_aff4db369521f4fbe56177e05793a325a}{modificar\+\_\+usuario} (request)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceusuario_1_1views_a592da1d9867c21c536be49a1ab5b7361}{ct\+\_\+proyecto} = Content\+Type.\+objects.\+get\+\_\+for\+\_\+model(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto})
+\item 
+\hyperlink{namespaceusuario_1_1views_a68d770ef541ea63e90a73d98640c60dc}{permiso}
+\item 
+\hyperlink{namespaceusuario_1_1views_a9c613e5b69ad136aac1d7051827b9969}{p}
+\item 
+\hyperlink{namespaceusuario_1_1views_ab881852337137a8832523599f2b3da69}{codename}
+\item 
+\hyperlink{namespaceusuario_1_1views_a23bd2b0f3efef86a7657aedbbb7a4b3a}{name}
+\item 
+\hyperlink{namespaceusuario_1_1views_aef6a1060a6b410adfb273991886184cf}{content\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Se permite la creacion de usuarios, la modificacion de datos de la cuenta
+actual que adquiere en el sistema\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones}
+\index{usuario\+::views@{usuario\+::views}!cambiarcontrasena@{cambiarcontrasena}}
+\index{cambiarcontrasena@{cambiarcontrasena}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{cambiarcontrasena(request)}{cambiarcontrasena(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+cambiarcontrasena (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_aea38fe57150e943bb6d5491afb6469d3}{}\label{namespaceusuario_1_1views_aea38fe57150e943bb6d5491afb6469d3}
+\begin{DoxyVerb}Proporciona la opcion de cambiar contrasenha del usuario. Solicita previamente la contrasenha anterior para realizar
+el cambio correspondiente. \end{DoxyVerb}
+ 
+
+Definición en la línea 125 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!eliminaruser@{eliminaruser}}
+\index{eliminaruser@{eliminaruser}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{eliminaruser(request, usuid)}{eliminaruser(request, usuid)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+eliminaruser (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{usuid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_a5dde06470e472a111dfeb03e0c0b08e9}{}\label{namespaceusuario_1_1views_a5dde06470e472a111dfeb03e0c0b08e9}
+\begin{DoxyVerb}Esta funcionalidad permite la eliminacion logica de un usuario aplicada por  un usuario de tipo administrador.
+La operacion no permite la autoeliminacion, por tanto esta sujeta a determinados permisos y restricciones.
+No puede ser aplicada a un usuario asociado a un proyecto sin cancelar y/o finalizar.\end{DoxyVerb}
+ 
+
+Definición en la línea 166 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!listaruser@{listaruser}}
+\index{listaruser@{listaruser}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{listaruser(request)}{listaruser(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+listaruser (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_a0db98f64c23eb4d8108c3dbd2479c96c}{}\label{namespaceusuario_1_1views_a0db98f64c23eb4d8108c3dbd2479c96c}
+\begin{DoxyVerb}Esta operacion permite listar todos los usuarios del sistema\end{DoxyVerb}
+ 
+
+Definición en la línea 154 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!modificar\+\_\+usuario@{modificar\+\_\+usuario}}
+\index{modificar\+\_\+usuario@{modificar\+\_\+usuario}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{modificar\+\_\+usuario(request)}{modificar_usuario(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+modificar\+\_\+usuario (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_aff4db369521f4fbe56177e05793a325a}{}\label{namespaceusuario_1_1views_aff4db369521f4fbe56177e05793a325a}
+\begin{DoxyVerb}Esta funcion permite la modificacion de los datos personales de un usuario. La modificacion solo puede ser
+hecha por el mismo usuario. Valida que no exitan dos usuarios con el mismo correo electronico dentro del sistema\end{DoxyVerb}
+ 
+
+Definición en la línea 204 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!registrousuario@{registrousuario}}
+\index{registrousuario@{registrousuario}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{registrousuario(request)}{registrousuario(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+registrousuario (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_a3a696649b1a5dee50690bd74484d03f7}{}\label{namespaceusuario_1_1views_a3a696649b1a5dee50690bd74484d03f7}
+\begin{DoxyVerb}Permite la  creacion de una cuenta de  usuario en el sistema, teniendo en cuenta sus datos personales
+y una contrasenha para su autentificacion dentro del mismo. Controla que no existan username duplicados \end{DoxyVerb}
+ 
+
+Definición en la línea 60 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!Validate\+Email@{Validate\+Email}}
+\index{Validate\+Email@{Validate\+Email}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{Validate\+Email(email)}{ValidateEmail(email)}}]{\setlength{\rightskip}{0pt plus 5cm}def usuario.\+views.\+Validate\+Email (
+\begin{DoxyParamCaption}
+\item[{}]{email}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceusuario_1_1views_a7f223bba6a608a3d766fde36feaadde0}{}\label{namespaceusuario_1_1views_a7f223bba6a608a3d766fde36feaadde0}
+
+
+Definición en la línea 119 del archivo views.\+py.
+
+
+
+\subsection{Documentación de las variables}
+\index{usuario\+::views@{usuario\+::views}!codename@{codename}}
+\index{codename@{codename}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{codename}{codename}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+codename}\hypertarget{namespaceusuario_1_1views_ab881852337137a8832523599f2b3da69}{}\label{namespaceusuario_1_1views_ab881852337137a8832523599f2b3da69}
+
+
+Definición en la línea 59 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!content\+\_\+type@{content\+\_\+type}}
+\index{content\+\_\+type@{content\+\_\+type}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{content\+\_\+type}{content_type}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+content\+\_\+type}\hypertarget{namespaceusuario_1_1views_aef6a1060a6b410adfb273991886184cf}{}\label{namespaceusuario_1_1views_aef6a1060a6b410adfb273991886184cf}
+
+
+Definición en la línea 59 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!ct\+\_\+proyecto@{ct\+\_\+proyecto}}
+\index{ct\+\_\+proyecto@{ct\+\_\+proyecto}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{ct\+\_\+proyecto}{ct_proyecto}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+ct\+\_\+proyecto = Content\+Type.\+objects.\+get\+\_\+for\+\_\+model({\bf Proyecto})}\hypertarget{namespaceusuario_1_1views_a592da1d9867c21c536be49a1ab5b7361}{}\label{namespaceusuario_1_1views_a592da1d9867c21c536be49a1ab5b7361}
+
+
+Definición en la línea 14 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!name@{name}}
+\index{name@{name}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+name}\hypertarget{namespaceusuario_1_1views_a23bd2b0f3efef86a7657aedbbb7a4b3a}{}\label{namespaceusuario_1_1views_a23bd2b0f3efef86a7657aedbbb7a4b3a}
+
+
+Definición en la línea 59 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!p@{p}}
+\index{p@{p}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+p}\hypertarget{namespaceusuario_1_1views_a9c613e5b69ad136aac1d7051827b9969}{}\label{namespaceusuario_1_1views_a9c613e5b69ad136aac1d7051827b9969}
+
+
+Definición en la línea 59 del archivo views.\+py.
+
+\index{usuario\+::views@{usuario\+::views}!permiso@{permiso}}
+\index{permiso@{permiso}!usuario\+::views@{usuario\+::views}}
+\subsubsection[{\texorpdfstring{permiso}{permiso}}]{\setlength{\rightskip}{0pt plus 5cm}usuario.\+views.\+permiso}\hypertarget{namespaceusuario_1_1views_a68d770ef541ea63e90a73d98640c60dc}{}\label{namespaceusuario_1_1views_a68d770ef541ea63e90a73d98640c60dc}
+
+
+Definición en la línea 59 del archivo views.\+py.
+

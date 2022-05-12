@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Proyectos
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}">Home</a>
+                </li>
+				 
+               
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; Lista de Proyectos
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                       <!-- <h1>Lista de Proyectos: </h1>
+                        <p>Asociados al usuario.</p> -->
+						<h2  class="list-group-item active">
+									Proyectos Asociados
+						</h2>
+                        {% if lista_proyectos %}
+						    <table>
+                                {% for proyectos in lista_proyectos %}
+                                    {% for pur in lista_nombres %}
+                                        {% if proyectos.nombre == pur.proyecto %}
+                                            <tr>
+                                                <th scope="row"> {{proyectos.nombre}}</th>
+                                                <td> <a class ="add" href="{% url 'ver_proyecto' proyectos.id %}"> Elegir </a></td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+						    </table>
+					    {% else %}
+						    <div class="alert-danger form-control" role="alert">No esta asociado a ningun proyecto </div>
+					    {% endif %}
+						
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

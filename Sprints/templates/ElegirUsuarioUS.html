@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administración de Sprint
+                </li>
+
+                <li class="sidebar-brand">
+                        ____________________
+                </li>
+                 <li>
+                    <a href="{% url 'ListaUS' proyectoid sprintid%}">Atrás</a>
+                </li>
+                 <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Proyecto</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; <a href="{% url 'ListarSprint' proyectoid %}" >Sprints del Proyecto</a>
+                    &rsaquo; <a href="{% url 'ListaUS' proyectoid sprintid %}" >US del Sprint</a>
+                    &rsaquo; Miembros del Sprint
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+						<h2  class="list-group-item active">
+							Lista de Usuarios del Sprint
+                        </h2>
+                        {% if li %}
+                            <table>
+                                {% for usu in li %}
+                                    {% if usu.user.is_active %}
+                                        <tr>
+                                            <th scope="row"> {{ usu.user.username}}</th>
+                                            <td> <a class ="add" href="{% url 'AsignarMiembroUS' Us.id usu.id sprintid %}"> Elegir</a></td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </table>
+					    {% endif %}
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

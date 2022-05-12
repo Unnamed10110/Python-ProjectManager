@@ -1,0 +1,193 @@
+\hypertarget{class_sprints_1_1models_1_1_sprint}{}\section{Referencia de la Clase Sprints.\+models.\+Sprint}
+\label{class_sprints_1_1models_1_1_sprint}\index{Sprints.\+models.\+Sprint@{Sprints.\+models.\+Sprint}}
+Diagrama de herencias de Sprints.\+models.\+Sprint\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sprints_1_1models_1_1_sprint}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_ac1769b1a95d70d6d1f33b68c3f955c63}{get\+\_\+nombre} (self)
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_a88cf4f82119e2f6ab9d641618a9e77b5}{get\+\_\+fecha\+Inicio} (self)
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_ae7ec3e6432269e2ddabecdcdc967bbd7}{get\+\_\+fecha\+Fin} (self)
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_a2544130663a3a223422064df662a9d02}{get\+\_\+estado} (self)
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_aed513ecf7b351c2f2e4cd7cf26e9f7fd}{nombre\+\_\+correcto} (self, nombre\+Nuevo)
+\item 
+def \hyperlink{class_sprints_1_1models_1_1_sprint_a39e13487b84a64f15b16a0d752f85602}{\+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a69a53233e03770e3e83ce7a97736d7f1}{nombre} = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a21683e638d8cfe5a2c7f5963d9b2cf17}{duracion} = models.\+Integer\+Field()
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a7993b1db9672285b74bf48be881dd068}{fecha\+Inicio} = models.\+Date\+Field(null=True)
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a218867a666420d6b2cec0503b5079881}{fecha\+Fin} = models.\+Date\+Field(null=True)
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_ae5815ea36c2c34f5eed0c61b6f89254b}{id\+\_\+proyecto} = models.\+Foreign\+Key(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto}, null=True)
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a666d4cc2bd3ba38f47babbc20ac61025}{tiempo\+\_\+asignado} = models.\+Float\+Field(default=0,null=True)
+\item 
+tuple \hyperlink{class_sprints_1_1models_1_1_sprint_a261ff3c709405026d85a3dfe47610d93}{estados}
+\item 
+\hyperlink{class_sprints_1_1models_1_1_sprint_a2a9784349eba1639bf4aca9c72c98c5b}{estado} = models.\+Char\+Field(max\+\_\+length=50, choices=\hyperlink{class_sprints_1_1models_1_1_sprint_a261ff3c709405026d85a3dfe47610d93}{estados})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Todos los atributos para que un Sprint sea identificado\end{DoxyVerb}
+ 
+
+Definición en la línea 6 del archivo models.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+iter\+\_\+\+\_\+(self)}{__iter__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+\_\+\+\_\+iter\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_a39e13487b84a64f15b16a0d752f85602}{}\label{class_sprints_1_1models_1_1_sprint_a39e13487b84a64f15b16a0d752f85602}
+
+
+Definición en la línea 39 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!get\+\_\+estado@{get\+\_\+estado}}
+\index{get\+\_\+estado@{get\+\_\+estado}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{get\+\_\+estado(self)}{get_estado(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+get\+\_\+estado (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_a2544130663a3a223422064df662a9d02}{}\label{class_sprints_1_1models_1_1_sprint_a2544130663a3a223422064df662a9d02}
+
+
+Definición en la línea 30 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!get\+\_\+fecha\+Fin@{get\+\_\+fecha\+Fin}}
+\index{get\+\_\+fecha\+Fin@{get\+\_\+fecha\+Fin}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{get\+\_\+fecha\+Fin(self)}{get_fechaFin(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+get\+\_\+fecha\+Fin (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_ae7ec3e6432269e2ddabecdcdc967bbd7}{}\label{class_sprints_1_1models_1_1_sprint_ae7ec3e6432269e2ddabecdcdc967bbd7}
+
+
+Definición en la línea 27 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!get\+\_\+fecha\+Inicio@{get\+\_\+fecha\+Inicio}}
+\index{get\+\_\+fecha\+Inicio@{get\+\_\+fecha\+Inicio}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{get\+\_\+fecha\+Inicio(self)}{get_fechaInicio(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+get\+\_\+fecha\+Inicio (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_a88cf4f82119e2f6ab9d641618a9e77b5}{}\label{class_sprints_1_1models_1_1_sprint_a88cf4f82119e2f6ab9d641618a9e77b5}
+
+
+Definición en la línea 24 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!get\+\_\+nombre@{get\+\_\+nombre}}
+\index{get\+\_\+nombre@{get\+\_\+nombre}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{get\+\_\+nombre(self)}{get_nombre(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+get\+\_\+nombre (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_ac1769b1a95d70d6d1f33b68c3f955c63}{}\label{class_sprints_1_1models_1_1_sprint_ac1769b1a95d70d6d1f33b68c3f955c63}
+
+
+Definición en la línea 21 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!nombre\+\_\+correcto@{nombre\+\_\+correcto}}
+\index{nombre\+\_\+correcto@{nombre\+\_\+correcto}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{nombre\+\_\+correcto(self, nombre\+Nuevo)}{nombre_correcto(self, nombreNuevo)}}]{\setlength{\rightskip}{0pt plus 5cm}def Sprints.\+models.\+Sprint.\+nombre\+\_\+correcto (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{nombre\+Nuevo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_sprints_1_1models_1_1_sprint_aed513ecf7b351c2f2e4cd7cf26e9f7fd}{}\label{class_sprints_1_1models_1_1_sprint_aed513ecf7b351c2f2e4cd7cf26e9f7fd}
+
+
+Definición en la línea 32 del archivo models.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!duracion@{duracion}}
+\index{duracion@{duracion}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{duracion}{duracion}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+duracion = models.\+Integer\+Field()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a21683e638d8cfe5a2c7f5963d9b2cf17}{}\label{class_sprints_1_1models_1_1_sprint_a21683e638d8cfe5a2c7f5963d9b2cf17}
+
+
+Definición en la línea 9 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!estado@{estado}}
+\index{estado@{estado}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{estado}{estado}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+estado = models.\+Char\+Field(max\+\_\+length=50, choices={\bf estados})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a2a9784349eba1639bf4aca9c72c98c5b}{}\label{class_sprints_1_1models_1_1_sprint_a2a9784349eba1639bf4aca9c72c98c5b}
+
+
+Definición en la línea 20 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!estados@{estados}}
+\index{estados@{estados}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{estados}{estados}}]{\setlength{\rightskip}{0pt plus 5cm}tuple Sprints.\+models.\+Sprint.\+estados\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a261ff3c709405026d85a3dfe47610d93}{}\label{class_sprints_1_1models_1_1_sprint_a261ff3c709405026d85a3dfe47610d93}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = (
+2         (\textcolor{stringliteral}{'Pendiente'}, \textcolor{stringliteral}{'Pendiente'}),
+3         (\textcolor{stringliteral}{'Ejecutando'}, \textcolor{stringliteral}{'Ejecutando'}),
+4         (\textcolor{stringliteral}{'Cancelado'}, \textcolor{stringliteral}{'Cancelado'}),
+5         (\textcolor{stringliteral}{'Finalizado'}, \textcolor{stringliteral}{'Finalizado'}),
+6     )
+\end{DoxyCode}
+
+
+Definición en la línea 14 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!fecha\+Fin@{fecha\+Fin}}
+\index{fecha\+Fin@{fecha\+Fin}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{fecha\+Fin}{fechaFin}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+fecha\+Fin = models.\+Date\+Field(null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a218867a666420d6b2cec0503b5079881}{}\label{class_sprints_1_1models_1_1_sprint_a218867a666420d6b2cec0503b5079881}
+
+
+Definición en la línea 11 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!fecha\+Inicio@{fecha\+Inicio}}
+\index{fecha\+Inicio@{fecha\+Inicio}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{fecha\+Inicio}{fechaInicio}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+fecha\+Inicio = models.\+Date\+Field(null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a7993b1db9672285b74bf48be881dd068}{}\label{class_sprints_1_1models_1_1_sprint_a7993b1db9672285b74bf48be881dd068}
+
+
+Definición en la línea 10 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!id\+\_\+proyecto@{id\+\_\+proyecto}}
+\index{id\+\_\+proyecto@{id\+\_\+proyecto}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{id\+\_\+proyecto}{id_proyecto}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+id\+\_\+proyecto = models.\+Foreign\+Key({\bf Proyecto}, null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_ae5815ea36c2c34f5eed0c61b6f89254b}{}\label{class_sprints_1_1models_1_1_sprint_ae5815ea36c2c34f5eed0c61b6f89254b}
+
+
+Definición en la línea 12 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!nombre@{nombre}}
+\index{nombre@{nombre}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{nombre}{nombre}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+nombre = models.\+Char\+Field(max\+\_\+length=50, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a69a53233e03770e3e83ce7a97736d7f1}{}\label{class_sprints_1_1models_1_1_sprint_a69a53233e03770e3e83ce7a97736d7f1}
+
+
+Definición en la línea 8 del archivo models.\+py.
+
+\index{Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}!tiempo\+\_\+asignado@{tiempo\+\_\+asignado}}
+\index{tiempo\+\_\+asignado@{tiempo\+\_\+asignado}!Sprints\+::models\+::\+Sprint@{Sprints\+::models\+::\+Sprint}}
+\subsubsection[{\texorpdfstring{tiempo\+\_\+asignado}{tiempo_asignado}}]{\setlength{\rightskip}{0pt plus 5cm}Sprints.\+models.\+Sprint.\+tiempo\+\_\+asignado = models.\+Float\+Field(default=0,null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_sprints_1_1models_1_1_sprint_a666d4cc2bd3ba38f47babbc20ac61025}{}\label{class_sprints_1_1models_1_1_sprint_a666d4cc2bd3ba38f47babbc20ac61025}
+
+
+Definición en la línea 13 del archivo models.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/\+Sprints/\hyperlink{_sprints_2models_8py}{models.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classusuario_1_1migrations_1_10001__initial_1_1_migration}{}\section{Referencia de la Clase usuario.\+migrations.0001\+\_\+initial.Migration}
+\label{classusuario_1_1migrations_1_10001__initial_1_1_migration}\index{usuario.\+migrations.\+0001\+\_\+initial.\+Migration@{usuario.\+migrations.\+0001\+\_\+initial.\+Migration}}
+Diagrama de herencias de usuario.\+migrations.0001\+\_\+initial.Migration\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classusuario_1_1migrations_1_10001__initial_1_1_migration}
+\end{center}
+\end{figure}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classusuario_1_1migrations_1_10001__initial_1_1_migration_a01da22f440a0a2a8568d17e4c69a0c3d}{initial} = True
+\item 
+list \hyperlink{classusuario_1_1migrations_1_10001__initial_1_1_migration_a32994120f3e7f243508e979f839b7733}{dependencies}
+\item 
+list \hyperlink{classusuario_1_1migrations_1_10001__initial_1_1_migration_a1b1e2cc8f6749112d5582bb47942df78}{operations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 10 del archivo 0001\+\_\+initial.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{dependencies}{dependencies}}]{\setlength{\rightskip}{0pt plus 5cm}list usuario.\+migrations.\+0001\+\_\+initial.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1migrations_1_10001__initial_1_1_migration_a32994120f3e7f243508e979f839b7733}{}\label{classusuario_1_1migrations_1_10001__initial_1_1_migration_a32994120f3e7f243508e979f839b7733}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         migrations.swappable\_dependency(settings.AUTH\_USER\_MODEL),
+3         (\textcolor{stringliteral}{'proyectos'}, \textcolor{stringliteral}{'0001\_initial'}),
+4     ]
+\end{DoxyCode}
+
+
+Definición en la línea 14 del archivo 0001\+\_\+initial.\+py.
+
+\index{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}!initial@{initial}}
+\index{initial@{initial}!usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{initial}{initial}}]{\setlength{\rightskip}{0pt plus 5cm}bool usuario.\+migrations.\+0001\+\_\+initial.\+Migration.\+initial = True\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1migrations_1_10001__initial_1_1_migration_a01da22f440a0a2a8568d17e4c69a0c3d}{}\label{classusuario_1_1migrations_1_10001__initial_1_1_migration_a01da22f440a0a2a8568d17e4c69a0c3d}
+
+
+Definición en la línea 12 del archivo 0001\+\_\+initial.\+py.
+
+\index{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}!operations@{operations}}
+\index{operations@{operations}!usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration@{usuario\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{operations}{operations}}]{\setlength{\rightskip}{0pt plus 5cm}list usuario.\+migrations.\+0001\+\_\+initial.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classusuario_1_1migrations_1_10001__initial_1_1_migration_a1b1e2cc8f6749112d5582bb47942df78}{}\label{classusuario_1_1migrations_1_10001__initial_1_1_migration_a1b1e2cc8f6749112d5582bb47942df78}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         migrations.CreateModel(
+3             name=\textcolor{stringliteral}{'UserProfile'},
+4             fields=[
+5                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+6                 (\textcolor{stringliteral}{'direccion'}, models.CharField(default=\textcolor{stringliteral}{''}, max\_length=50)),
+7                 (\textcolor{stringliteral}{'telefono'}, models.CharField(default=\textcolor{stringliteral}{''}, max\_length=50)),
+8                 (\textcolor{stringliteral}{'captrabajo'}, models.IntegerField(default=0)),
+9                 (\textcolor{stringliteral}{'trabasignado'}, models.FloatField(default=0)),
+10                 (\textcolor{stringliteral}{'descripcion'}, models.CharField(default=\textcolor{stringliteral}{''}, max\_length=240)),
+11                 (\textcolor{stringliteral}{'es\_administrador'}, models.BooleanField(default=\textcolor{keyword}{False})),
+12                 (\textcolor{stringliteral}{'proyectos'}, models.ManyToManyField(default=\textcolor{keywordtype}{None}, to=\textcolor{stringliteral}{'proyectos.Proyecto'})),
+13                 (\textcolor{stringliteral}{'user'}, models.OneToOneField(on\_delete=django.db.models.deletion.CASCADE, to=
+      settings.AUTH\_USER\_MODEL)),
+14             ],
+15         ),
+16     ]
+\end{DoxyCode}
+
+
+Definición en la línea 19 del archivo 0001\+\_\+initial.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/usuario/migrations/\hyperlink{usuario_2migrations_20001__initial_8py}{0001\+\_\+initial.\+py}\end{DoxyCompactItemize}

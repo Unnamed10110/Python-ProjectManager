@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    Administracion de Sprint
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                 </li>
+                <li>
+                    <a href="{% url 'ListarSprint' proyectoid %}" >Atras</a>
+                </li>
+                 <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Proyecto</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" >Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+                    &rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; <a href="{% url 'ListarSprint' proyectoid %}" >Sprints del Proyecto</a>
+                    &rsaquo; Asignar Flujo al Sprint
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-6">
+                            <h2  class="list-group-item active">
+                                Asignar Flujo al Sprint
+                            </h2>
+                            {% if lista_flujos %}
+                                <table>
+                                    {% for flujo in lista_flujos %}
+                                        <tr>
+                                        <th scope="row"> {{flujo.nombre}}</th>
+                                        <td> <a href="{% url 'AsignarFlujoSprint' flujo.id sprintid proyectoid %}"> Elegir</a></td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            {%else%}
+                                <div class="alert-danger form-control"> No existen flujos que puedan agregarse al Sprint</div>
+                            {%endif%}
+                           <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                        </div>
+                        <div class="col-lg-6">
+                            <h2  class="list-group-item active">
+                                Flujos Asignados
+                            </h2>
+                            {% if lista_asig %}
+                                <table>
+                                    {% for flujo in lista_asig %}
+                                        <tr>
+                                            <th scope="row"> {{flujo.nombre}}</th>
+                                            <td> <a class ="add" href="#"> </a></td>
+                                         </tr>
+                                    {% endfor %}
+                                </table>
+                            {%else%}
+                                <div class="alert-danger form-control"> No hay flujos asignados al Sprint</div>
+                            {%endif%}
+                           <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock%}

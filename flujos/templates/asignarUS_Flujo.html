@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Asignar Activiadad a Flujos
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'listarFlujos' proyectoid %}">Atrás</a>
+                </li>
+               <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+                    &rsaquo; Asignar US al Flujo
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+						<h2  class="list-group-item active">
+								Lista de US a asignar al flujo
+						</h2>
+						{% if not mensajeError %}
+                            <form action="" class="" method="POST" >{% csrf_token %}
+                                <div class="form-group ">
+                                    <label for="nombreUS">Nombre del US</label>
+                                    <input class="form-control" name="nombreUS" id="nombreUS" type="text"  required>
+                                </div>
+                                <button class="btn bg bottom-left" value="boton">Asignar al Flujo</button>
+                                <label></label>
+                                {% if mensajeExito %}
+                                    <div class="alert-success form-control" role="alert">
+                                        {{ mensajeExito }}
+                                    </div>
+                                {% endif %}
+                                {% if mensajeError1 %}
+                                    <div class="alert-danger form-control" role="alert">
+                                        {{ mensajeError1 }}
+                                    </div>
+                                {% endif %}
+
+                            </form>
+                        </div>
+                        {% else %}
+                            <div class="alert-danger form-control" role="alert">
+                              {{ mensajeError }}
+                            </div>
+					  	{% endif %}
+                    </div>
+                <div class="row">
+                    {% if not mensajeError %}
+                        <div class="col-lg-6">
+
+                                <h5 class="list-group-item active">
+                                    User Stories sin asignar
+                                </h5>
+                            {% if  USs1 %}
+                                <table >
+                                        {% for u in USs1 %}
+                                            <tr>
+                                            <th scope="row"> {{ u.nombreUS }}</th>
+                                                <td><a class="label" href="#"></a> </td>
+                                            </tr>
+                                        {% endfor %}
+
+                                    </tr>
+                                 </table>
+                            {% else %}
+                                    <div class="alert-warning form-control" role="alert">
+                                        Todos los US ya fueron asignados al Flujo
+                                    </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-6">
+                                <h5 class="list-group-item active">
+                                    User Stories asignados al Flujo
+                                </h5>
+                            {% if USs2 %}
+                                <table >
+                                    <tr>
+                                        {% for u in USs2 %}
+                                            <th scope="row"> {{ u.nombreUS }}</th>
+                                            <td><a class="label" href="#"></a> </td>
+                                        {% endfor %}
+
+                                    </tr>
+                                 </table>
+                            {% else %}
+                                <div class="alert-warning form-control" role="alert">
+                                    No se han asignado ningun US al Flujo
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+\hypertarget{classflujos_1_1migrations_1_10001__initial_1_1_migration}{}\section{Referencia de la Clase flujos.\+migrations.0001\+\_\+initial.Migration}
+\label{classflujos_1_1migrations_1_10001__initial_1_1_migration}\index{flujos.\+migrations.\+0001\+\_\+initial.\+Migration@{flujos.\+migrations.\+0001\+\_\+initial.\+Migration}}
+Diagrama de herencias de flujos.\+migrations.0001\+\_\+initial.Migration\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classflujos_1_1migrations_1_10001__initial_1_1_migration}
+\end{center}
+\end{figure}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classflujos_1_1migrations_1_10001__initial_1_1_migration_acac33de22b59ff2f084554f135ec7237}{initial} = True
+\item 
+list \hyperlink{classflujos_1_1migrations_1_10001__initial_1_1_migration_ab8abf92bf1fd8e340abf54a0b9b53a4a}{dependencies}
+\item 
+list \hyperlink{classflujos_1_1migrations_1_10001__initial_1_1_migration_a551e85de7746f53ce793e05a1925a165}{operations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 9 del archivo 0001\+\_\+initial.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{dependencies}{dependencies}}]{\setlength{\rightskip}{0pt plus 5cm}list flujos.\+migrations.\+0001\+\_\+initial.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1migrations_1_10001__initial_1_1_migration_ab8abf92bf1fd8e340abf54a0b9b53a4a}{}\label{classflujos_1_1migrations_1_10001__initial_1_1_migration_ab8abf92bf1fd8e340abf54a0b9b53a4a}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         (\textcolor{stringliteral}{'tipoUS'}, \textcolor{stringliteral}{'0001\_initial'}),
+3         (\textcolor{stringliteral}{'Sprints'}, \textcolor{stringliteral}{'\_\_first\_\_'}),
+4         (\textcolor{stringliteral}{'proyectos'}, \textcolor{stringliteral}{'\_\_first\_\_'}),
+5     ]
+\end{DoxyCode}
+
+
+Definición en la línea 13 del archivo 0001\+\_\+initial.\+py.
+
+\index{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}!initial@{initial}}
+\index{initial@{initial}!flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{initial}{initial}}]{\setlength{\rightskip}{0pt plus 5cm}bool flujos.\+migrations.\+0001\+\_\+initial.\+Migration.\+initial = True\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1migrations_1_10001__initial_1_1_migration_acac33de22b59ff2f084554f135ec7237}{}\label{classflujos_1_1migrations_1_10001__initial_1_1_migration_acac33de22b59ff2f084554f135ec7237}
+
+
+Definición en la línea 11 del archivo 0001\+\_\+initial.\+py.
+
+\index{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}!operations@{operations}}
+\index{operations@{operations}!flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration@{flujos\+::migrations\+::0001\+\_\+initial\+::\+Migration}}
+\subsubsection[{\texorpdfstring{operations}{operations}}]{\setlength{\rightskip}{0pt plus 5cm}list flujos.\+migrations.\+0001\+\_\+initial.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1migrations_1_10001__initial_1_1_migration_a551e85de7746f53ce793e05a1925a165}{}\label{classflujos_1_1migrations_1_10001__initial_1_1_migration_a551e85de7746f53ce793e05a1925a165}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = [
+2         migrations.CreateModel(
+3             name=\textcolor{stringliteral}{'Actividades'},
+4             fields=[
+5                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+6                 (\textcolor{stringliteral}{'nombre'}, models.CharField(default=\textcolor{stringliteral}{''}, max\_length=500)),
+7             ],
+8         ),
+9         migrations.CreateModel(
+10             name=\textcolor{stringliteral}{'Flujos'},
+11             fields=[
+12                 (\textcolor{stringliteral}{'id'}, models.AutoField(auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, verbose\_name=\textcolor{stringliteral}{
+      'ID'})),
+13                 (\textcolor{stringliteral}{'nombre'}, models.CharField(default=\textcolor{stringliteral}{''}, max\_length=100)),
+14                 (\textcolor{stringliteral}{'proyecto'}, models.ForeignKey(default=\textcolor{stringliteral}{''}, on\_delete=django.db.models.deletion.CASCADE, to=\textcolor{stringliteral}{
+      'proyectos.Proyecto'})),
+15                 (\textcolor{stringliteral}{'sprint'}, models.ForeignKey(default=\textcolor{stringliteral}{''}, null=\textcolor{keyword}{True}, on\_delete=
+      django.db.models.deletion.CASCADE, to=\textcolor{stringliteral}{'Sprints.Sprint'})),
+16                 (\textcolor{stringliteral}{'tipoUS'}, models.ForeignKey(default=\textcolor{stringliteral}{''}, on\_delete=django.db.models.deletion.CASCADE, to=\textcolor{stringliteral}{'
+      tipoUS.tipo\_us'})),
+17             ],
+18         ),
+19         migrations.AddField(
+20             model\_name=\textcolor{stringliteral}{'actividades'},
+21             name=\textcolor{stringliteral}{'flujo'},
+22             field=models.ForeignKey(default=\textcolor{stringliteral}{''}, null=\textcolor{keyword}{True}, on\_delete=django.db.models.deletion.CASCADE, to=\textcolor{stringliteral}{
+      'flujos.Flujos'}),
+23         ),
+24         migrations.AddField(
+25             model\_name=\textcolor{stringliteral}{'actividades'},
+26             name=\textcolor{stringliteral}{'proyecto'},
+27             field=models.ForeignKey(default=\textcolor{stringliteral}{''}, on\_delete=django.db.models.deletion.CASCADE, to=\textcolor{stringliteral}{'
+      proyectos.Proyecto'}),
+28         ),
+29     ]
+\end{DoxyCode}
+
+
+Definición en la línea 19 del archivo 0001\+\_\+initial.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/flujos/migrations/\hyperlink{flujos_2migrations_20001__initial_8py}{0001\+\_\+initial.\+py}\end{DoxyCompactItemize}

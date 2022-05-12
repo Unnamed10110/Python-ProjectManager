@@ -1,0 +1,77 @@
+\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production}{}\section{Referencia del Namespace Gestor\+Proyectos.\+settings.\+production}
+\label{namespace_gestor_proyectos_1_1settings_1_1production}\index{Gestor\+Proyectos.\+settings.\+production@{Gestor\+Proyectos.\+settings.\+production}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_gestor_proyectos_1_1settings_1_1production_abd0ae018aa0ff29a3b22393c0cdbfb54}{D\+E\+B\+UG} = True
+\item 
+list \hyperlink{namespace_gestor_proyectos_1_1settings_1_1production_ae13b1a28db97970095ee64b7e7ac8663}{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS} = \mbox{[}$\,$\mbox{]}
+\item 
+dictionary \hyperlink{namespace_gestor_proyectos_1_1settings_1_1production_a8cfcda1b42d37da48291029b4343e355}{D\+A\+T\+A\+B\+A\+S\+ES}
+\item 
+string \hyperlink{namespace_gestor_proyectos_1_1settings_1_1production_a71476a25631b511bc14e5beac309374e}{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL} = \textquotesingle{}/static/\textquotesingle{}
+\item 
+tuple \hyperlink{namespace_gestor_proyectos_1_1settings_1_1production_abdddc5e88758d68ded15fc9860790ce0}{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}configuracion del entorno de produccion del sistema, extendida de base.py
+- con base de datos de produccion separada
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las variables}
+\index{Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}!A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS@{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}}
+\index{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS@{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}!Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}}
+\subsubsection[{\texorpdfstring{A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS}{ALLOWED_HOSTS}}]{\setlength{\rightskip}{0pt plus 5cm}list Gestor\+Proyectos.\+settings.\+production.\+A\+L\+L\+O\+W\+E\+D\+\_\+\+H\+O\+S\+TS = \mbox{[}$\,$\mbox{]}}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production_ae13b1a28db97970095ee64b7e7ac8663}{}\label{namespace_gestor_proyectos_1_1settings_1_1production_ae13b1a28db97970095ee64b7e7ac8663}
+
+
+Definición en la línea 7 del archivo production.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}!D\+A\+T\+A\+B\+A\+S\+ES@{D\+A\+T\+A\+B\+A\+S\+ES}}
+\index{D\+A\+T\+A\+B\+A\+S\+ES@{D\+A\+T\+A\+B\+A\+S\+ES}!Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+B\+A\+S\+ES}{DATABASES}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary Gestor\+Proyectos.\+settings.\+production.\+D\+A\+T\+A\+B\+A\+S\+ES}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production_a8cfcda1b42d37da48291029b4343e355}{}\label{namespace_gestor_proyectos_1_1settings_1_1production_a8cfcda1b42d37da48291029b4343e355}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = \{
+2     \textcolor{stringliteral}{'default'}: \{
+3         \textcolor{stringliteral}{'ENGINE'}: \textcolor{stringliteral}{'django.db.backends.postgresql\_psycopg2'},
+4         \textcolor{stringliteral}{'NAME'}: \textcolor{stringliteral}{'produccion'}, \textcolor{comment}{# is2}
+5         \textcolor{stringliteral}{'USER'}: \textcolor{stringliteral}{'is2'},
+6         \textcolor{stringliteral}{'PASSWORD'}: \textcolor{stringliteral}{'12345'},\textcolor{comment}{#12345}
+7 
+8     \}
+9 \}
+\end{DoxyCode}
+
+
+Definición en la línea 10 del archivo production.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}!D\+E\+B\+UG@{D\+E\+B\+UG}}
+\index{D\+E\+B\+UG@{D\+E\+B\+UG}!Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+UG}{DEBUG}}]{\setlength{\rightskip}{0pt plus 5cm}bool Gestor\+Proyectos.\+settings.\+production.\+D\+E\+B\+UG = True}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production_abd0ae018aa0ff29a3b22393c0cdbfb54}{}\label{namespace_gestor_proyectos_1_1settings_1_1production_abd0ae018aa0ff29a3b22393c0cdbfb54}
+
+
+Definición en la línea 6 del archivo production.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}!S\+T\+A\+T\+I\+C\+\_\+\+U\+RL@{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}}
+\index{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL@{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}!Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+I\+C\+\_\+\+U\+RL}{STATIC_URL}}]{\setlength{\rightskip}{0pt plus 5cm}string Gestor\+Proyectos.\+settings.\+production.\+S\+T\+A\+T\+I\+C\+\_\+\+U\+RL = \textquotesingle{}/static/\textquotesingle{}}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production_a71476a25631b511bc14e5beac309374e}{}\label{namespace_gestor_proyectos_1_1settings_1_1production_a71476a25631b511bc14e5beac309374e}
+
+
+Definición en la línea 20 del archivo production.\+py.
+
+\index{Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}!S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS@{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}}
+\index{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS@{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}!Gestor\+Proyectos\+::settings\+::production@{Gestor\+Proyectos\+::settings\+::production}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}{STATICFILES_DIRS}}]{\setlength{\rightskip}{0pt plus 5cm}tuple Gestor\+Proyectos.\+settings.\+production.\+S\+T\+A\+T\+I\+C\+F\+I\+L\+E\+S\+\_\+\+D\+I\+RS}\hypertarget{namespace_gestor_proyectos_1_1settings_1_1production_abdddc5e88758d68ded15fc9860790ce0}{}\label{namespace_gestor_proyectos_1_1settings_1_1production_abdddc5e88758d68ded15fc9860790ce0}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = (
+2     \textcolor{stringliteral}{'static'},
+3 )
+\end{DoxyCode}
+
+
+Definición en la línea 22 del archivo production.\+py.
+

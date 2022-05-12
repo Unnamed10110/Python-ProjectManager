@@ -1,0 +1,230 @@
+\hypertarget{classproyectos_1_1models_1_1_proyecto}{}\section{Referencia de la Clase proyectos.\+models.\+Proyecto}
+\label{classproyectos_1_1models_1_1_proyecto}\index{proyectos.\+models.\+Proyecto@{proyectos.\+models.\+Proyecto}}
+Diagrama de herencias de proyectos.\+models.\+Proyecto\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classproyectos_1_1models_1_1_proyecto}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_a08490a70901a6d07bb2c86b601246fe7}{get\+\_\+nombre} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_a4a5f95a864deff8360324a85702ca4be}{get\+\_\+fecha\+Inicio} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_ad26f9bee88c31c4d25e10bd8a6ec3e10}{get\+\_\+fecha\+Fin} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_a5e43fb0e66afd0fa59697958a04c7452}{get\+\_\+estado} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_a2e93deaf28f67912a944d6ffb70b0910}{get\+\_\+scrum} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_a57f9157d86710286744c0585f1d150c6}{get\+\_\+usuarios} (self)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_aff2f57172ece9d914a3bc193d3b4864d}{nombre\+\_\+correcto} (self, nombre\+Nuevo)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_aef41adaee4652b480f23a2bf76eb7bc0}{scrum\+\_\+master\+\_\+correcto} (self, scrum)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_ab7566fe0b9b7d5ca26c41a1bc86d3d9e}{fechas\+\_\+correctas} (self, fecha1, fecha2)
+\item 
+def \hyperlink{classproyectos_1_1models_1_1_proyecto_ad6feeea517d80e04ad29f376e97046b2}{\+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{classproyectos_1_1models_1_1_proyecto_af8ea604ae2dc593803ddab2200176b1a}{estados}
+\item 
+\hyperlink{classproyectos_1_1models_1_1_proyecto_a9adee55c9a87f8d6caca1a59cbc2e51e}{nombre} = models.\+Char\+Field(max\+\_\+length=50)
+\item 
+\hyperlink{classproyectos_1_1models_1_1_proyecto_a5e8ca5da89095206f3bd85e43e5277a2}{fecha\+Inicio} = models.\+Date\+Field()
+\item 
+\hyperlink{classproyectos_1_1models_1_1_proyecto_acee41eb9e758a1bc0ded9f009a67aa04}{fecha\+Fin} = models.\+Date\+Field()
+\item 
+\hyperlink{classproyectos_1_1models_1_1_proyecto_a5bcfbd8aa6e420395745339aa1baa0e0}{estado} = models.\+Char\+Field(max\+\_\+length=50,choices=\hyperlink{classproyectos_1_1models_1_1_proyecto_af8ea604ae2dc593803ddab2200176b1a}{estados})
+\item 
+\hyperlink{classproyectos_1_1models_1_1_proyecto_ac9da9a44762facf820f3158c2d9b012b}{scrum\+\_\+master} = models.\+Char\+Field(max\+\_\+length=50,default=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 9 del archivo models.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+iter\+\_\+\+\_\+(self)}{__iter__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+\_\+\+\_\+iter\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_ad6feeea517d80e04ad29f376e97046b2}{}\label{classproyectos_1_1models_1_1_proyecto_ad6feeea517d80e04ad29f376e97046b2}
+
+
+Definición en la línea 56 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!fechas\+\_\+correctas@{fechas\+\_\+correctas}}
+\index{fechas\+\_\+correctas@{fechas\+\_\+correctas}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{fechas\+\_\+correctas(self, fecha1, fecha2)}{fechas_correctas(self, fecha1, fecha2)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+fechas\+\_\+correctas (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{fecha1, }
+\item[{}]{fecha2}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_ab7566fe0b9b7d5ca26c41a1bc86d3d9e}{}\label{classproyectos_1_1models_1_1_proyecto_ab7566fe0b9b7d5ca26c41a1bc86d3d9e}
+
+
+Definición en la línea 51 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+estado@{get\+\_\+estado}}
+\index{get\+\_\+estado@{get\+\_\+estado}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+estado(self)}{get_estado(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+estado (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_a5e43fb0e66afd0fa59697958a04c7452}{}\label{classproyectos_1_1models_1_1_proyecto_a5e43fb0e66afd0fa59697958a04c7452}
+
+
+Definición en la línea 31 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+fecha\+Fin@{get\+\_\+fecha\+Fin}}
+\index{get\+\_\+fecha\+Fin@{get\+\_\+fecha\+Fin}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+fecha\+Fin(self)}{get_fechaFin(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+fecha\+Fin (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_ad26f9bee88c31c4d25e10bd8a6ec3e10}{}\label{classproyectos_1_1models_1_1_proyecto_ad26f9bee88c31c4d25e10bd8a6ec3e10}
+
+
+Definición en la línea 29 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+fecha\+Inicio@{get\+\_\+fecha\+Inicio}}
+\index{get\+\_\+fecha\+Inicio@{get\+\_\+fecha\+Inicio}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+fecha\+Inicio(self)}{get_fechaInicio(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+fecha\+Inicio (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_a4a5f95a864deff8360324a85702ca4be}{}\label{classproyectos_1_1models_1_1_proyecto_a4a5f95a864deff8360324a85702ca4be}
+
+
+Definición en la línea 27 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+nombre@{get\+\_\+nombre}}
+\index{get\+\_\+nombre@{get\+\_\+nombre}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+nombre(self)}{get_nombre(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+nombre (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_a08490a70901a6d07bb2c86b601246fe7}{}\label{classproyectos_1_1models_1_1_proyecto_a08490a70901a6d07bb2c86b601246fe7}
+
+
+Definición en la línea 25 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+scrum@{get\+\_\+scrum}}
+\index{get\+\_\+scrum@{get\+\_\+scrum}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+scrum(self)}{get_scrum(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+scrum (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_a2e93deaf28f67912a944d6ffb70b0910}{}\label{classproyectos_1_1models_1_1_proyecto_a2e93deaf28f67912a944d6ffb70b0910}
+
+
+Definición en la línea 33 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!get\+\_\+usuarios@{get\+\_\+usuarios}}
+\index{get\+\_\+usuarios@{get\+\_\+usuarios}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{get\+\_\+usuarios(self)}{get_usuarios(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+get\+\_\+usuarios (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_a57f9157d86710286744c0585f1d150c6}{}\label{classproyectos_1_1models_1_1_proyecto_a57f9157d86710286744c0585f1d150c6}
+
+
+Definición en la línea 35 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!nombre\+\_\+correcto@{nombre\+\_\+correcto}}
+\index{nombre\+\_\+correcto@{nombre\+\_\+correcto}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{nombre\+\_\+correcto(self, nombre\+Nuevo)}{nombre_correcto(self, nombreNuevo)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+nombre\+\_\+correcto (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{nombre\+Nuevo}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_aff2f57172ece9d914a3bc193d3b4864d}{}\label{classproyectos_1_1models_1_1_proyecto_aff2f57172ece9d914a3bc193d3b4864d}
+\begin{DoxyVerb}Verifica que no haya nombres de proyectos duplicados\end{DoxyVerb}
+ 
+
+Definición en la línea 38 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!scrum\+\_\+master\+\_\+correcto@{scrum\+\_\+master\+\_\+correcto}}
+\index{scrum\+\_\+master\+\_\+correcto@{scrum\+\_\+master\+\_\+correcto}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{scrum\+\_\+master\+\_\+correcto(self, scrum)}{scrum_master_correcto(self, scrum)}}]{\setlength{\rightskip}{0pt plus 5cm}def proyectos.\+models.\+Proyecto.\+scrum\+\_\+master\+\_\+correcto (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{scrum}
+\end{DoxyParamCaption}
+)}\hypertarget{classproyectos_1_1models_1_1_proyecto_aef41adaee4652b480f23a2bf76eb7bc0}{}\label{classproyectos_1_1models_1_1_proyecto_aef41adaee4652b480f23a2bf76eb7bc0}
+
+
+Definición en la línea 45 del archivo models.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!estado@{estado}}
+\index{estado@{estado}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{estado}{estado}}]{\setlength{\rightskip}{0pt plus 5cm}proyectos.\+models.\+Proyecto.\+estado = models.\+Char\+Field(max\+\_\+length=50,choices={\bf estados})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_a5bcfbd8aa6e420395745339aa1baa0e0}{}\label{classproyectos_1_1models_1_1_proyecto_a5bcfbd8aa6e420395745339aa1baa0e0}
+
+
+Definición en la línea 19 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!estados@{estados}}
+\index{estados@{estados}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{estados}{estados}}]{\setlength{\rightskip}{0pt plus 5cm}tuple proyectos.\+models.\+Proyecto.\+estados\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_af8ea604ae2dc593803ddab2200176b1a}{}\label{classproyectos_1_1models_1_1_proyecto_af8ea604ae2dc593803ddab2200176b1a}
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}
+1 = (
+2         (\textcolor{stringliteral}{'Pendiente'},\textcolor{stringliteral}{'Pendiente'}),
+3         (\textcolor{stringliteral}{'Ejecutando'}, \textcolor{stringliteral}{'Ejecutando'}),
+4         (\textcolor{stringliteral}{'Cancelado'}, \textcolor{stringliteral}{'Cancelado'}),
+5         (\textcolor{stringliteral}{'Finalizado'}, \textcolor{stringliteral}{'Finalizado'}),
+6     )
+\end{DoxyCode}
+
+
+Definición en la línea 10 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!fecha\+Fin@{fecha\+Fin}}
+\index{fecha\+Fin@{fecha\+Fin}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{fecha\+Fin}{fechaFin}}]{\setlength{\rightskip}{0pt plus 5cm}proyectos.\+models.\+Proyecto.\+fecha\+Fin = models.\+Date\+Field()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_acee41eb9e758a1bc0ded9f009a67aa04}{}\label{classproyectos_1_1models_1_1_proyecto_acee41eb9e758a1bc0ded9f009a67aa04}
+
+
+Definición en la línea 18 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!fecha\+Inicio@{fecha\+Inicio}}
+\index{fecha\+Inicio@{fecha\+Inicio}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{fecha\+Inicio}{fechaInicio}}]{\setlength{\rightskip}{0pt plus 5cm}proyectos.\+models.\+Proyecto.\+fecha\+Inicio = models.\+Date\+Field()\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_a5e8ca5da89095206f3bd85e43e5277a2}{}\label{classproyectos_1_1models_1_1_proyecto_a5e8ca5da89095206f3bd85e43e5277a2}
+
+
+Definición en la línea 17 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!nombre@{nombre}}
+\index{nombre@{nombre}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{nombre}{nombre}}]{\setlength{\rightskip}{0pt plus 5cm}proyectos.\+models.\+Proyecto.\+nombre = models.\+Char\+Field(max\+\_\+length=50)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_a9adee55c9a87f8d6caca1a59cbc2e51e}{}\label{classproyectos_1_1models_1_1_proyecto_a9adee55c9a87f8d6caca1a59cbc2e51e}
+
+
+Definición en la línea 16 del archivo models.\+py.
+
+\index{proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}!scrum\+\_\+master@{scrum\+\_\+master}}
+\index{scrum\+\_\+master@{scrum\+\_\+master}!proyectos\+::models\+::\+Proyecto@{proyectos\+::models\+::\+Proyecto}}
+\subsubsection[{\texorpdfstring{scrum\+\_\+master}{scrum_master}}]{\setlength{\rightskip}{0pt plus 5cm}proyectos.\+models.\+Proyecto.\+scrum\+\_\+master = models.\+Char\+Field(max\+\_\+length=50,default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classproyectos_1_1models_1_1_proyecto_ac9da9a44762facf820f3158c2d9b012b}{}\label{classproyectos_1_1models_1_1_proyecto_ac9da9a44762facf820f3158c2d9b012b}
+
+
+Definición en la línea 20 del archivo models.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/proyectos/\hyperlink{proyectos_2models_8py}{models.\+py}\end{DoxyCompactItemize}

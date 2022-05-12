@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+		
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Mi Cuenta
+                </li>
+                <li>
+                    <a href="{% url 'cambiarcontra' %}" >Cambiar Contrasenha</a>
+                </li>
+				<li>
+                    <a href="{% url 'moduser' %}">Modificar mis Datos</a>
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                </li>
+				<li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'micuenta' %}">Mi Cuenta</a>
+					&rsaquo; Modificar mis Datos
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3  class="list-group-item active">
+								Actualizar Datos
+						</h3>
+						
+						<form action="" class="" method="POST" > {% csrf_token %}
+                           <!-- <div class="form-group ">
+                                <label for="username">Username</label>
+                                <input class="form-control" name="username" id="username" type="text" value="{{usuario.user.username }}" required>
+                            </div> -->
+                            <div class="form-group ">
+                                <label for="nombre">Nombre</label>
+                                <input class="form-control" name="nombre" id="nombre" type="text" value="{{usuario.user.first_name}}" required>
+                            </div>
+                             <div class="form-group ">
+                                <label for="apellido">Apellido</label>
+                                <input class="form-control" name="apellido" id="apellido" type="text" value="{{usuario.user.last_name}}" required>
+                            </div>
+                            <div class="form-group ">
+                                <label for="direccion">Direccion</label>
+                                <input class="form-control" name="direccion" id="direccion" type="text" value="{{usuario.direccion}}">
+                            </div>
+                            <div class="form-group ">
+                                <label for="email">Email</label>
+                                <input class="form-control" name="email" id="email" type="email" value="{{usuario.user.email}}" required>
+                            </div>
+                               <div class="form-group ">
+                                <label for="captrabajo">Capacidad de Trabajo</label>
+                                <input class="form-control" name="captrabajo" id="captrabajo" type="text" value="{{usuario.captrabajo}}" required>
+                            </div>
+                            <div class="form-group ">
+                                <label for="descripcion">Descripcion</label>
+                                <input class="form-control" name="descripcion" id="descripcion" type="text" value="{{usuario.descripcion}}">
+                            </div>
+                            <div class="form-group ">
+                                <label for="telefono">Telefono</label>
+                                <input class="form-control" name="telefono" id="telefono" type="text" value="{{usuario.telefono}}">
+                            </div>
+
+                           <button class="btn bg bottom-left" >Guardar</button>
+                            {% if mensaje %}
+                                {% if mensaje == 'Usuario Modificado Exitosamente.' %}
+                                    <div class="alert-success" role="alert">
+                                    {{ mensaje }}
+                                    </div>
+                                {% else %}
+                                    <div class="alert-danger form-control" role="alert">
+                                    {{ mensaje }}
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+
+                        </form>
+
+
+						
+						
+						
+						
+						
+						
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Administración
+                </li>
+                <li>
+                    <a href="{% url 'crearusuario' %}" rel="next">Crear Usuario</a>
+                </li>
+				 <li>
+                    <a href="{% url 'listaruser' %}">Eliminar Usuario</a>
+                </li>
+				 <li>
+                    <a href="{% url 'crearproyecto' %}">Crear Proyecto</a>
+                </li>
+                 <li class="sidebar-brand">
+                        ____________________
+                     </li>
+				<li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'administracion' %}">Administracion</a>
+					&rsaquo; Lista de Usuarios
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2  class="list-group-item active">
+								Baja de Usuario
+						</h2>
+						<form method="post">{% csrf_token %}
+							<table>
+								{% for usu in usuario %}
+                                    <tr>
+                                <!-- +no deve listar un usuario desactivado +no debe listar al usuario actual-->
+                                        {%if usu.user.is_active == True and usu.user.get_username != request.user.username %}
+                                            <th scope="row"> {{usu.user.get_username }}</th>
+                                            <td><a class="addlink" href="{% url 'eliminarusuario' usu.id %}"> Eliminar</a> </td>
+                                        {%endif%}
+                                    </tr>
+								{% endfor %}
+							</table>
+						</form>
+						
+                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Flujos
+                </li>
+                {% if perms.flujos.crear_flujo%}
+                    <li>
+                        <a href="{% url 'importarFlujo' proyectoid %}" rel="next">Importar Flujo</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'crearFlujos' proyectoid %}" rel="next">Crear Flujo</a>
+                    </li>
+                {%endif%}
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'ver_proyecto' proyectoid %}">Atrás</a>
+                </li>
+
+				<li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+					&rsaquo; Flujos
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <table class="col-lg-12">
+						<h2  class="list-group-item active">
+								Lista de Flujos
+						</h2>
+						{% if flujos %}
+                            <table>
+                                {% for flujo in flujos %}
+                                    <tr>
+                                        <th scope="row"> {{ flujo.nombre }}</th>
+                                        <td > <a class ="addlink" href="{% url 'verFlujo' flujo.id %}"> Ver Flujo Kanban</a></td>
+                                            {% if perms.flujos.crear_flujo%}
+                                                <td><a class ="addlink" href="{% url 'modificarFlujo' flujo.id %}"> Modificar </a></td>
+                                                <td><a class ="addlink" href="{% url 'asignarActividades' flujo.id %}"> Crear y Asignar Actividades </a></td>
+
+                                            {%endif%}
+                                    </tr>
+                                {% endfor %}
+							  </table>
+					    {% else %}
+						<div class="alert-danger form-control" role="alert">
+						  {{ mensaje }}
+						</div>
+					  	{% endif %}
+
+
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

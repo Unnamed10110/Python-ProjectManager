@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Flujos
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                </li>
+                <li>
+                    <a href="{% url 'verUScambiarEstado' flujo.id  uStory.id %}">Atras</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+                    &rsaquo; <a href="{% url 'verFlujo' flujo.id %}">Ver Flujo</a>
+					&rsaquo; <a href="{% url 'verUScambiarEstado' flujo.id  uStory.id %}">Cambiar Estado US</a>
+                    &rsaquo; Retroceder US
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-md-12">
+						<h3  class="list-group-item active">
+								A que actividad desea cambiar el Flujo
+						</h3>
+                        <form class="" method="POST">{% csrf_token %}
+                            <div class="form-group ">
+                                <label for="nombreA">Actividad Nueva:</label>
+                                <select class="form-control" name="actividad" id="option" required>
+                                    {% for a in actividades %}
+                                        <option value="{{a.nombre}}">{{a.nombre}}</option>
+                                    {%endfor%}
+                                </select>
+                            </div>
+                            <button class="btn bg bottom-left">Guardar</button>
+                        </form>
+                        {% if mensajeExito %}
+                            <div class="alert-success form-control" role="alert">
+                                {{ mensajeExito }}
+                            </div>
+                        {% endif %}
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

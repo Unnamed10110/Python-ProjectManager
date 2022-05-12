@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+
+{% block body%}
+    <div id="wrapper">
+
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Flujos
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                </li>
+                <li>
+                    <a href="{% url 'modificarFlujo' idflujo %}">Atras</a>
+                </li>
+                <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+					&rsaquo; <a href="{% url 'modificarFlujo' idflujo %}">Modificar Flujos</a>
+                    &rsaquo; Modificar una Actividad del Flujo
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-md-12">
+						<h2  class="list-group-item active">
+								Datos de la Actividad
+						</h2>
+                        <form class="" method="POST">{% csrf_token %}
+                            <div class="form-group ">
+                                <label for="nombreA">Nombre de la Actividad:</label>
+                                <input  id="nombreA" class="form-control" name="nombreA" value="{{actividad.nombre}}" type="text" required/>
+                            </div>
+                            <button class="btn bg bottom-left">Guardar</button>
+                        </form>
+                        {% if mensajeExito %}
+                            <div class="alert-success form-control" role="alert">
+                                {{ mensajeExito }}
+                            </div>
+                        {% endif %}
+                        {% if mensajeError %}
+                            <div class="alert-danger form-control" role="alert">
+                                {{ mensajeError }}
+                            </div>
+                        {% endif %}
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

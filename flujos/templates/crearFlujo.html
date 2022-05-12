@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title%} SGP {% endblock%}
+{% block head%}
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $("#boton1").click(function(event) {
+            $("#actividades").load('crearFlujo.html div#listaActividades');
+        });
+        });
+    </script>
+{% endblock %}
+
+{% block body%}
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        Flujos
+                </li>
+                <li class="sidebar-brand">
+                        ____________________
+                     </li>
+                <li>
+                    <a href="{% url 'listarFlujos' proyectoid %}">Atrás</a>
+                </li>
+               <li>
+                    <a href="{% url 'homepage' %}" rel="next">Home</a>
+               </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<div class="breadcrumbs">
+					<a href="{% url 'homepage' %}">Home</a>
+					&rsaquo; <a href="{% url 'elegirProyecto' %}">Lista de Proyectos</a>
+                    &rsaquo; <a href="{% url 'ver_proyecto' proyectoid %}">Resumen de Proyecto</a>
+                    &rsaquo; <a href="{% url 'listarFlujos' proyectoid %}">Flujos</a>
+					&rsaquo; Crear Flujos
+                    <div class="btn bg-primary">
+                        <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                    </div>
+				</div>
+                <div class="row">
+                    <div class="col-lg-12">
+						<h2  class="list-group-item active">
+								Crear un Nuevo Flujo
+						</h2>
+                        {% if mensajeError == "Se necesita tener Tipo de US creados antes de crear un flujo"%}
+                           <div class="alert-warning form-control" role="alert">
+                                Se necesita tener Tipos de US creados antes de crear un flujo.
+                                Cree un flujo a travez del enlace:  <a href="{% url 'CrearTipoUS' proyectoid %}">Crear Tipo de US</a>
+                           </div>
+                        {% else %}
+                            <form action="" class="" method="POST" >{% csrf_token %}
+                                <div class="form-group ">
+                                    <label for="nombre">Nombre del Flujo</label>
+                                    <input class="form-control" name="nombre" id="nombre" type="text"  required>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="tpUS">Tipo de User Story</label>
+                                    <select class="form-control" name="tpUS" id="option" required>
+                                        {% for tus in lista_tipoUS %}
+                                            <option value="{{tus.nombre}}">{{tus.nombre}}</option>
+                                        {%endfor%}
+                                    </select>
+                                </div>
+                                <button class="btn bg bottom-left" value="boton">Guardar Flujo</button>
+                                {% if mensajeExito %}
+                                    <div class="alert-success form-control" role="alert">
+                                        {{ mensajeExito }}
+                                    </div>
+                                {% endif %}
+                                {% if mensajeError %}
+                                    <div class="alert-danger form-control" role="alert">
+                                        {{ mensajeError }}
+                                    </div>
+                                {% endif %}
+                            </form>
+                        {% endif %}
+                    <!--    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar/Ocultar Menu</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+{% endblock %}

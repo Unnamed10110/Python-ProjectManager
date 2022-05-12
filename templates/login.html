@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap3 %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SGP</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <header>
+            <h1>Gestor de Proyectos</h1>
+        </header>
+
+    </div>
+    <div class="container-fluid">
+        <section class=" main row">
+            <section class="col-md-9">
+                <h4><p>SGP ayuda a monitorear proyectos utilizando <br /> metodologias agiles Scrum y Kanban </p></h4>
+            </section>
+            <form method="post" class="col-md-3">{% csrf_token %}
+                <h2 class="form-signin-heading">Login</h2>
+                <label for="inputUser" class="sr-only">Usuario</label>
+                <input type="text" id="username" class="form-control" name= "username" placeholder="User"  required >
+                <label for="inputPassword" class="sr-only">Contrasenha</label>
+                <input type="password" id="password" class="form-control " name ="password" placeholder="Password" required>
+               <!--
+               <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+                -->
+                <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+                {% if message%}
+                    <div class="alert-danger form-control" role="alert">
+                        {{ message }}
+                    </div>
+                {% endif %}
+            </form>
+        </section>
+    </div>
+    <div class=" container-fluid">
+        <footer>
+            <p>
+                Desarrolladores:<br /> Ester Alfonzo, Sergio Britos, <br />Luis Delvalle y Cynthia Montiel
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

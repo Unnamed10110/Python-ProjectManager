@@ -1,0 +1,227 @@
+\hypertarget{classuser_story_1_1models_1_1_user_stories}{}\section{Referencia de la Clase user\+Story.\+models.\+User\+Stories}
+\label{classuser_story_1_1models_1_1_user_stories}\index{user\+Story.\+models.\+User\+Stories@{user\+Story.\+models.\+User\+Stories}}
+Diagrama de herencias de user\+Story.\+models.\+User\+Stories\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classuser_story_1_1models_1_1_user_stories}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classuser_story_1_1models_1_1_user_stories_a1b9d750558d9ba1d62ac8f9a8df8026a}{nombre\+\_\+duplicado} (self, nombre, proyectoid)
+\item 
+def \hyperlink{classuser_story_1_1models_1_1_user_stories_a2556b581ec600d9b6b2a6dea04454bd8}{asignado\+\_\+a\+\_\+user} (self, usuario)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a129b6e2463b6ce9ec3ca204c408303e8}{id\+\_\+proyecto} = models.\+Foreign\+Key(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto},null=True)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_ab0c43b69bb58a9813846b1ea586a0789}{sprint} = models.\+Foreign\+Key(\hyperlink{class_sprints_1_1models_1_1_sprint}{Sprint}, null=True)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_aef9db53ba498c5fd769c0c6bde3f1b54}{tipo\+US} = models.\+Foreign\+Key(\hyperlink{classtipo_u_s_1_1models_1_1tipo__us}{tipo\+\_\+us},null=True)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a0ee6ed978e6d77c2b8fb929088734cd5}{usuario\+\_\+asignado} = models.\+Foreign\+Key(\hyperlink{classusuario_1_1models_1_1_user_profile}{User\+Profile}, null=True)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a01fdc4470aae2e717becedffccd7da3d}{nombre\+US} = models.\+Char\+Field(max\+\_\+length=50,default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a5747a9e05af6584278875d718c650c88}{valor\+\_\+negocio} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a063c3ed2939ba157b573b974347bab49}{valor\+\_\+tecnico} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_aa362ec1a6aca862e2e8093758f055c16}{prioridad\+\_\+cliente} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a5c49ad7f64583a89297b4bc3efef1acd}{prioridad} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a59c31c96525fb97a99df3c82ccefec49}{tiempo\+\_\+planificado} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_add4c9402f48f9d57b0786e27e4df58ea}{tiempo\+\_\+ejecutado} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a2548818f576e0fd6fd91b3750d1fe1f4}{tiempo\+\_\+acumulado} = models.\+Float\+Field(default=0)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a48ef4cf166f2feccd1728a8b68d89b7e}{descripcion\+\_\+corta} = models.\+Char\+Field(max\+\_\+length=80,default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a05d086050cb66bb31d2406622f964704}{descripcion\+\_\+larga} = models.\+Text\+Field(max\+\_\+length=5000,default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_ae88fff4e2e6fe453a5f13412bdf1a985}{notas} = models.\+Text\+Field(max\+\_\+length=6000, default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a89ef1d61ea0200dbdf1838bd2d10cc29}{terminado} = models.\+Boolean\+Field(default=False)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_acdeffb640834747b701ee1b1562ea47d}{estado} = models.\+Char\+Field(max\+\_\+length=100, default=\textquotesingle{}\textquotesingle{}, null=True)
+\item 
+\hyperlink{classuser_story_1_1models_1_1_user_stories_a589704713cc509199343a09d27f210e9}{actividad} = models.\+Foreign\+Key(\hyperlink{classflujos_1_1models_1_1_actividades}{Actividades}, default=\textquotesingle{}\textquotesingle{}, null=True)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}:param la extension de la clase models
+Todos los atributos que son necesarios para que un US sea identificado\end{DoxyVerb}
+ 
+
+Definición en la línea 14 del archivo models.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!asignado\+\_\+a\+\_\+user@{asignado\+\_\+a\+\_\+user}}
+\index{asignado\+\_\+a\+\_\+user@{asignado\+\_\+a\+\_\+user}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{asignado\+\_\+a\+\_\+user(self, usuario)}{asignado_a_user(self, usuario)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Story.\+models.\+User\+Stories.\+asignado\+\_\+a\+\_\+user (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{usuario}
+\end{DoxyParamCaption}
+)}\hypertarget{classuser_story_1_1models_1_1_user_stories_a2556b581ec600d9b6b2a6dea04454bd8}{}\label{classuser_story_1_1models_1_1_user_stories_a2556b581ec600d9b6b2a6dea04454bd8}
+\begin{DoxyVerb}Evalua que ningun usuario pueda tener sobrecarga de trabajo\end{DoxyVerb}
+ 
+
+Definición en la línea 46 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!nombre\+\_\+duplicado@{nombre\+\_\+duplicado}}
+\index{nombre\+\_\+duplicado@{nombre\+\_\+duplicado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{nombre\+\_\+duplicado(self, nombre, proyectoid)}{nombre_duplicado(self, nombre, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def user\+Story.\+models.\+User\+Stories.\+nombre\+\_\+duplicado (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{nombre, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{classuser_story_1_1models_1_1_user_stories_a1b9d750558d9ba1d62ac8f9a8df8026a}{}\label{classuser_story_1_1models_1_1_user_stories_a1b9d750558d9ba1d62ac8f9a8df8026a}
+\begin{DoxyVerb}Comprueba que no existan US con el mismo nombre\end{DoxyVerb}
+ 
+
+Definición en la línea 38 del archivo models.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!actividad@{actividad}}
+\index{actividad@{actividad}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{actividad}{actividad}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+actividad = models.\+Foreign\+Key({\bf Actividades}, default=\textquotesingle{}\textquotesingle{}, null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a589704713cc509199343a09d27f210e9}{}\label{classuser_story_1_1models_1_1_user_stories_a589704713cc509199343a09d27f210e9}
+
+
+Definición en la línea 35 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!descripcion\+\_\+corta@{descripcion\+\_\+corta}}
+\index{descripcion\+\_\+corta@{descripcion\+\_\+corta}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{descripcion\+\_\+corta}{descripcion_corta}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+descripcion\+\_\+corta = models.\+Char\+Field(max\+\_\+length=80,default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a48ef4cf166f2feccd1728a8b68d89b7e}{}\label{classuser_story_1_1models_1_1_user_stories_a48ef4cf166f2feccd1728a8b68d89b7e}
+
+
+Definición en la línea 30 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!descripcion\+\_\+larga@{descripcion\+\_\+larga}}
+\index{descripcion\+\_\+larga@{descripcion\+\_\+larga}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{descripcion\+\_\+larga}{descripcion_larga}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+descripcion\+\_\+larga = models.\+Text\+Field(max\+\_\+length=5000,default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a05d086050cb66bb31d2406622f964704}{}\label{classuser_story_1_1models_1_1_user_stories_a05d086050cb66bb31d2406622f964704}
+
+
+Definición en la línea 31 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!estado@{estado}}
+\index{estado@{estado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{estado}{estado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+estado = models.\+Char\+Field(max\+\_\+length=100, default=\textquotesingle{}\textquotesingle{}, null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_acdeffb640834747b701ee1b1562ea47d}{}\label{classuser_story_1_1models_1_1_user_stories_acdeffb640834747b701ee1b1562ea47d}
+
+
+Definición en la línea 34 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!id\+\_\+proyecto@{id\+\_\+proyecto}}
+\index{id\+\_\+proyecto@{id\+\_\+proyecto}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{id\+\_\+proyecto}{id_proyecto}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+id\+\_\+proyecto = models.\+Foreign\+Key({\bf Proyecto},null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a129b6e2463b6ce9ec3ca204c408303e8}{}\label{classuser_story_1_1models_1_1_user_stories_a129b6e2463b6ce9ec3ca204c408303e8}
+
+
+Definición en la línea 18 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!nombre\+US@{nombre\+US}}
+\index{nombre\+US@{nombre\+US}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{nombre\+US}{nombreUS}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+nombre\+US = models.\+Char\+Field(max\+\_\+length=50,default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a01fdc4470aae2e717becedffccd7da3d}{}\label{classuser_story_1_1models_1_1_user_stories_a01fdc4470aae2e717becedffccd7da3d}
+
+
+Definición en la línea 22 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!notas@{notas}}
+\index{notas@{notas}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{notas}{notas}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+notas = models.\+Text\+Field(max\+\_\+length=6000, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_ae88fff4e2e6fe453a5f13412bdf1a985}{}\label{classuser_story_1_1models_1_1_user_stories_ae88fff4e2e6fe453a5f13412bdf1a985}
+
+
+Definición en la línea 32 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!prioridad@{prioridad}}
+\index{prioridad@{prioridad}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{prioridad}{prioridad}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+prioridad = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a5c49ad7f64583a89297b4bc3efef1acd}{}\label{classuser_story_1_1models_1_1_user_stories_a5c49ad7f64583a89297b4bc3efef1acd}
+
+
+Definición en la línea 26 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!prioridad\+\_\+cliente@{prioridad\+\_\+cliente}}
+\index{prioridad\+\_\+cliente@{prioridad\+\_\+cliente}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{prioridad\+\_\+cliente}{prioridad_cliente}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+prioridad\+\_\+cliente = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_aa362ec1a6aca862e2e8093758f055c16}{}\label{classuser_story_1_1models_1_1_user_stories_aa362ec1a6aca862e2e8093758f055c16}
+
+
+Definición en la línea 25 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!sprint@{sprint}}
+\index{sprint@{sprint}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{sprint}{sprint}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+sprint = models.\+Foreign\+Key({\bf Sprint}, null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_ab0c43b69bb58a9813846b1ea586a0789}{}\label{classuser_story_1_1models_1_1_user_stories_ab0c43b69bb58a9813846b1ea586a0789}
+
+
+Definición en la línea 19 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!terminado@{terminado}}
+\index{terminado@{terminado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{terminado}{terminado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+terminado = models.\+Boolean\+Field(default=False)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a89ef1d61ea0200dbdf1838bd2d10cc29}{}\label{classuser_story_1_1models_1_1_user_stories_a89ef1d61ea0200dbdf1838bd2d10cc29}
+
+
+Definición en la línea 33 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!tiempo\+\_\+acumulado@{tiempo\+\_\+acumulado}}
+\index{tiempo\+\_\+acumulado@{tiempo\+\_\+acumulado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{tiempo\+\_\+acumulado}{tiempo_acumulado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+tiempo\+\_\+acumulado = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a2548818f576e0fd6fd91b3750d1fe1f4}{}\label{classuser_story_1_1models_1_1_user_stories_a2548818f576e0fd6fd91b3750d1fe1f4}
+
+
+Definición en la línea 29 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!tiempo\+\_\+ejecutado@{tiempo\+\_\+ejecutado}}
+\index{tiempo\+\_\+ejecutado@{tiempo\+\_\+ejecutado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{tiempo\+\_\+ejecutado}{tiempo_ejecutado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+tiempo\+\_\+ejecutado = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_add4c9402f48f9d57b0786e27e4df58ea}{}\label{classuser_story_1_1models_1_1_user_stories_add4c9402f48f9d57b0786e27e4df58ea}
+
+
+Definición en la línea 28 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!tiempo\+\_\+planificado@{tiempo\+\_\+planificado}}
+\index{tiempo\+\_\+planificado@{tiempo\+\_\+planificado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{tiempo\+\_\+planificado}{tiempo_planificado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+tiempo\+\_\+planificado = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a59c31c96525fb97a99df3c82ccefec49}{}\label{classuser_story_1_1models_1_1_user_stories_a59c31c96525fb97a99df3c82ccefec49}
+
+
+Definición en la línea 27 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!tipo\+US@{tipo\+US}}
+\index{tipo\+US@{tipo\+US}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{tipo\+US}{tipoUS}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+tipo\+US = models.\+Foreign\+Key({\bf tipo\+\_\+us},null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_aef9db53ba498c5fd769c0c6bde3f1b54}{}\label{classuser_story_1_1models_1_1_user_stories_aef9db53ba498c5fd769c0c6bde3f1b54}
+
+
+Definición en la línea 20 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!usuario\+\_\+asignado@{usuario\+\_\+asignado}}
+\index{usuario\+\_\+asignado@{usuario\+\_\+asignado}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{usuario\+\_\+asignado}{usuario_asignado}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+usuario\+\_\+asignado = models.\+Foreign\+Key({\bf User\+Profile}, null=True)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a0ee6ed978e6d77c2b8fb929088734cd5}{}\label{classuser_story_1_1models_1_1_user_stories_a0ee6ed978e6d77c2b8fb929088734cd5}
+
+
+Definición en la línea 21 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!valor\+\_\+negocio@{valor\+\_\+negocio}}
+\index{valor\+\_\+negocio@{valor\+\_\+negocio}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{valor\+\_\+negocio}{valor_negocio}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+valor\+\_\+negocio = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a5747a9e05af6584278875d718c650c88}{}\label{classuser_story_1_1models_1_1_user_stories_a5747a9e05af6584278875d718c650c88}
+
+
+Definición en la línea 23 del archivo models.\+py.
+
+\index{user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}!valor\+\_\+tecnico@{valor\+\_\+tecnico}}
+\index{valor\+\_\+tecnico@{valor\+\_\+tecnico}!user\+Story\+::models\+::\+User\+Stories@{user\+Story\+::models\+::\+User\+Stories}}
+\subsubsection[{\texorpdfstring{valor\+\_\+tecnico}{valor_tecnico}}]{\setlength{\rightskip}{0pt plus 5cm}user\+Story.\+models.\+User\+Stories.\+valor\+\_\+tecnico = models.\+Float\+Field(default=0)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classuser_story_1_1models_1_1_user_stories_a063c3ed2939ba157b573b974347bab49}{}\label{classuser_story_1_1models_1_1_user_stories_a063c3ed2939ba157b573b974347bab49}
+
+
+Definición en la línea 24 del archivo models.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/user\+Story/\hyperlink{user_story_2models_8py}{models.\+py}\end{DoxyCompactItemize}

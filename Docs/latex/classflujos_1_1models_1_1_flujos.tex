@@ -1,0 +1,144 @@
+\hypertarget{classflujos_1_1models_1_1_flujos}{}\section{Referencia de la Clase flujos.\+models.\+Flujos}
+\label{classflujos_1_1models_1_1_flujos}\index{flujos.\+models.\+Flujos@{flujos.\+models.\+Flujos}}
+Diagrama de herencias de flujos.\+models.\+Flujos\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classflujos_1_1models_1_1_flujos}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classflujos_1_1models_1_1_flujos_a5b5a46d846e99662c866e30d51737ef1}{controlar\+Nombre} (self, n)
+\item 
+def \hyperlink{classflujos_1_1models_1_1_flujos_a31b2ca03ada70cb87e2cc3bbf5040702}{controlar\+Actividades} (self, n)
+\item 
+def \hyperlink{classflujos_1_1models_1_1_flujos_a73bf2e17276cd11c9663f7687c4ec58f}{controlar\+Miembros} (self, n)
+\item 
+def \hyperlink{classflujos_1_1models_1_1_flujos_ac834d94702394845f9ff1f4f621bc39d}{controlar\+Tipo\+US} (self, n)
+\item 
+def \hyperlink{classflujos_1_1models_1_1_flujos_a9852c685a8afe8c154d1fc0f426c5586}{obtener\+Primer\+Actividad} (self, idproyecto)
+\end{DoxyCompactItemize}
+\subsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflujos_1_1models_1_1_flujos_a6f22fee6a2cc9c0826736ad088e0e034}{nombre} = models.\+Char\+Field(max\+\_\+length=100,default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classflujos_1_1models_1_1_flujos_a13493fb05b460c32b47d5cd43eed6eb2}{tipo\+US} = models.\+Foreign\+Key(\hyperlink{classtipo_u_s_1_1models_1_1tipo__us}{tipo\+\_\+us},default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classflujos_1_1models_1_1_flujos_a907ce2435e97555295750974d66b7df0}{proyecto} = models.\+Foreign\+Key(\hyperlink{classproyectos_1_1models_1_1_proyecto}{Proyecto},default=\textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classflujos_1_1models_1_1_flujos_abd0b6bdf2feb2a6e41794ac5a3aa0ad2}{sprint} = models.\+Foreign\+Key(\hyperlink{class_sprints_1_1models_1_1_sprint}{Sprint}, null=True, default=\textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Clase Flujos:
+Atributos:
+    - nombre: Nombre del Flujo
+    - tipoUS: Tipo de User Story del Flujo
+    - proyecto: Proyecto a que pertenece el flujo
+\end{DoxyVerb}
+ 
+
+Definición en la línea 18 del archivo models.\+py.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!controlar\+Actividades@{controlar\+Actividades}}
+\index{controlar\+Actividades@{controlar\+Actividades}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{controlar\+Actividades(self, n)}{controlarActividades(self, n)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+models.\+Flujos.\+controlar\+Actividades (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classflujos_1_1models_1_1_flujos_a31b2ca03ada70cb87e2cc3bbf5040702}{}\label{classflujos_1_1models_1_1_flujos_a31b2ca03ada70cb87e2cc3bbf5040702}
+
+
+Definición en la línea 39 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!controlar\+Miembros@{controlar\+Miembros}}
+\index{controlar\+Miembros@{controlar\+Miembros}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{controlar\+Miembros(self, n)}{controlarMiembros(self, n)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+models.\+Flujos.\+controlar\+Miembros (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classflujos_1_1models_1_1_flujos_a73bf2e17276cd11c9663f7687c4ec58f}{}\label{classflujos_1_1models_1_1_flujos_a73bf2e17276cd11c9663f7687c4ec58f}
+
+
+Definición en la línea 46 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!controlar\+Nombre@{controlar\+Nombre}}
+\index{controlar\+Nombre@{controlar\+Nombre}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{controlar\+Nombre(self, n)}{controlarNombre(self, n)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+models.\+Flujos.\+controlar\+Nombre (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classflujos_1_1models_1_1_flujos_a5b5a46d846e99662c866e30d51737ef1}{}\label{classflujos_1_1models_1_1_flujos_a5b5a46d846e99662c866e30d51737ef1}
+
+
+Definición en la línea 34 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!controlar\+Tipo\+US@{controlar\+Tipo\+US}}
+\index{controlar\+Tipo\+US@{controlar\+Tipo\+US}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{controlar\+Tipo\+U\+S(self, n)}{controlarTipoUS(self, n)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+models.\+Flujos.\+controlar\+Tipo\+US (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classflujos_1_1models_1_1_flujos_ac834d94702394845f9ff1f4f621bc39d}{}\label{classflujos_1_1models_1_1_flujos_ac834d94702394845f9ff1f4f621bc39d}
+
+
+Definición en la línea 53 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!obtener\+Primer\+Actividad@{obtener\+Primer\+Actividad}}
+\index{obtener\+Primer\+Actividad@{obtener\+Primer\+Actividad}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{obtener\+Primer\+Actividad(self, idproyecto)}{obtenerPrimerActividad(self, idproyecto)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+models.\+Flujos.\+obtener\+Primer\+Actividad (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{idproyecto}
+\end{DoxyParamCaption}
+)}\hypertarget{classflujos_1_1models_1_1_flujos_a9852c685a8afe8c154d1fc0f426c5586}{}\label{classflujos_1_1models_1_1_flujos_a9852c685a8afe8c154d1fc0f426c5586}
+
+
+Definición en la línea 59 del archivo models.\+py.
+
+
+
+\subsection{Documentación de los datos miembro}
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!nombre@{nombre}}
+\index{nombre@{nombre}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{nombre}{nombre}}]{\setlength{\rightskip}{0pt plus 5cm}flujos.\+models.\+Flujos.\+nombre = models.\+Char\+Field(max\+\_\+length=100,default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1models_1_1_flujos_a6f22fee6a2cc9c0826736ad088e0e034}{}\label{classflujos_1_1models_1_1_flujos_a6f22fee6a2cc9c0826736ad088e0e034}
+
+
+Definición en la línea 26 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!proyecto@{proyecto}}
+\index{proyecto@{proyecto}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{proyecto}{proyecto}}]{\setlength{\rightskip}{0pt plus 5cm}flujos.\+models.\+Flujos.\+proyecto = models.\+Foreign\+Key({\bf Proyecto},default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1models_1_1_flujos_a907ce2435e97555295750974d66b7df0}{}\label{classflujos_1_1models_1_1_flujos_a907ce2435e97555295750974d66b7df0}
+
+
+Definición en la línea 30 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!sprint@{sprint}}
+\index{sprint@{sprint}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{sprint}{sprint}}]{\setlength{\rightskip}{0pt plus 5cm}flujos.\+models.\+Flujos.\+sprint = models.\+Foreign\+Key({\bf Sprint}, null=True, default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1models_1_1_flujos_abd0b6bdf2feb2a6e41794ac5a3aa0ad2}{}\label{classflujos_1_1models_1_1_flujos_abd0b6bdf2feb2a6e41794ac5a3aa0ad2}
+
+
+Definición en la línea 32 del archivo models.\+py.
+
+\index{flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}!tipo\+US@{tipo\+US}}
+\index{tipo\+US@{tipo\+US}!flujos\+::models\+::\+Flujos@{flujos\+::models\+::\+Flujos}}
+\subsubsection[{\texorpdfstring{tipo\+US}{tipoUS}}]{\setlength{\rightskip}{0pt plus 5cm}flujos.\+models.\+Flujos.\+tipo\+US = models.\+Foreign\+Key({\bf tipo\+\_\+us},default=\textquotesingle{}\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classflujos_1_1models_1_1_flujos_a13493fb05b460c32b47d5cd43eed6eb2}{}\label{classflujos_1_1models_1_1_flujos_a13493fb05b460c32b47d5cd43eed6eb2}
+
+
+Definición en la línea 29 del archivo models.\+py.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Gestor\+Proyectos/flujos/\hyperlink{flujos_2models_8py}{models.\+py}\end{DoxyCompactItemize}

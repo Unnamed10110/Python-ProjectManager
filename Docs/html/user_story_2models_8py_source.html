@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Gestor Proyectos: Fichero Fuente C:/GestorProyectos/userStory/models.py</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Gestor Proyectos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_39a25f4104f8ef1c4b8d91ff0d1fd2af.html">GestorProyectos</a></li><li class="navelem"><a class="el" href="dir_cd8b506519f9f080c13e8b8ea538ff0a.html">userStory</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">models.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="user_story_2models_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceuser_story_1_1models.html">    1</a></span>&#160;<span class="stringliteral">&#39;&#39;&#39;Se presenta el modelo de US para el sistema, las restricciones</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="stringliteral">que se deben tener en cuenta en cuanto a su asignacion a usuarios,</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">creacion y modificacion&#39;&#39;&#39;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">from</span> <a class="code" href="namespace_sprints_1_1models.html">Sprints.models</a> <span class="keyword">import</span> Sprint</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">from</span> <a class="code" href="namespaceflujos_1_1models.html">flujos.models</a> <span class="keyword">import</span> Actividades</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">from</span> <a class="code" href="namespaceproyectos_1_1models.html">proyectos.models</a> <span class="keyword">import</span> Proyecto</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">from</span> <a class="code" href="namespacetipo_u_s_1_1models.html">tipoUS.models</a> <span class="keyword">import</span> tipo_us</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">from</span> <a class="code" href="namespaceusuario_1_1models.html">usuario.models</a> <span class="keyword">import</span> UserProfile</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classuser_story_1_1models_1_1_user_stories.html">UserStories</a>(models.Model):</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">    :param la extension de la clase models</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">    Todos los atributos que son necesarios para que un US sea identificado&#39;&#39;&#39;</span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a129b6e2463b6ce9ec3ca204c408303e8">   18</a></span>&#160;    id_proyecto=models.ForeignKey(Proyecto,null=<span class="keyword">True</span>)</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#ab0c43b69bb58a9813846b1ea586a0789">   19</a></span>&#160;    sprint = models.ForeignKey(Sprint, null=<span class="keyword">True</span>)</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#aef9db53ba498c5fd769c0c6bde3f1b54">   20</a></span>&#160;    tipoUS = models.ForeignKey(tipo_us,null=<span class="keyword">True</span>)</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a0ee6ed978e6d77c2b8fb929088734cd5">   21</a></span>&#160;    usuario_asignado = models.ForeignKey(UserProfile, null=<span class="keyword">True</span>)</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a01fdc4470aae2e717becedffccd7da3d">   22</a></span>&#160;    nombreUS=models.CharField(max_length=50,default=<span class="stringliteral">&#39;&#39;</span>)</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a5747a9e05af6584278875d718c650c88">   23</a></span>&#160;    valor_negocio = models.FloatField(default=0)</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a063c3ed2939ba157b573b974347bab49">   24</a></span>&#160;    valor_tecnico = models.FloatField(default=0)</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#aa362ec1a6aca862e2e8093758f055c16">   25</a></span>&#160;    prioridad_cliente = models.FloatField(default=0)</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a5c49ad7f64583a89297b4bc3efef1acd">   26</a></span>&#160;    prioridad = models.FloatField(default=0)</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a59c31c96525fb97a99df3c82ccefec49">   27</a></span>&#160;    tiempo_planificado=models.FloatField(default=0)</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#add4c9402f48f9d57b0786e27e4df58ea">   28</a></span>&#160;    tiempo_ejecutado=models.FloatField(default=0)</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a2548818f576e0fd6fd91b3750d1fe1f4">   29</a></span>&#160;    tiempo_acumulado=models.FloatField(default=0)</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a48ef4cf166f2feccd1728a8b68d89b7e">   30</a></span>&#160;    descripcion_corta=models.CharField(max_length=80,default=<span class="stringliteral">&#39;&#39;</span>)</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a05d086050cb66bb31d2406622f964704">   31</a></span>&#160;    descripcion_larga=models.TextField(max_length=5000,default=<span class="stringliteral">&#39;&#39;</span>)</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#ae88fff4e2e6fe453a5f13412bdf1a985">   32</a></span>&#160;    notas = models.TextField(max_length=6000, default=<span class="stringliteral">&#39;&#39;</span>)</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a89ef1d61ea0200dbdf1838bd2d10cc29">   33</a></span>&#160;    terminado=models.BooleanField(default=<span class="keyword">False</span>)</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#acdeffb640834747b701ee1b1562ea47d">   34</a></span>&#160;    estado = models.CharField(max_length=100, default=<span class="stringliteral">&#39;&#39;</span>, null=<span class="keyword">True</span>)</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a589704713cc509199343a09d27f210e9">   35</a></span>&#160;    actividad = models.ForeignKey(Actividades, default=<span class="stringliteral">&#39;&#39;</span>, null=<span class="keyword">True</span>)</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment"># criterio_de_aceptacion=models.</span></div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a1b9d750558d9ba1d62ac8f9a8df8026a">   38</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classuser_story_1_1models_1_1_user_stories.html#a1b9d750558d9ba1d62ac8f9a8df8026a">nombre_duplicado</a>(self,nombre,proyectoid):</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Comprueba que no existan US con el mismo nombre&#39;&#39;&#39;</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ustory = UserStories.objects.filter(id_proyecto=Proyecto.objects.get(pk=proyectoid))</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> us <span class="keywordflow">in</span> ustory:</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> us.nombreUS == nombre:</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">False</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">True</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classuser_story_1_1models_1_1_user_stories.html#a2556b581ec600d9b6b2a6dea04454bd8">   46</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classuser_story_1_1models_1_1_user_stories.html#a2556b581ec600d9b6b2a6dea04454bd8">asignado_a_user</a>(self,usuario):</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Evalua que ningun usuario pueda tener sobrecarga de trabajo&#39;&#39;&#39;</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> usuario.captrabajo&lt;=usuario.trabasignado:</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">False</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">True</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">&#39;&#39;&#39;</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">class archivos(models.Model):</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">    #filename = models.CharField(max_length=100, null=True)</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">    archivos_adjuntos = models.FileField(upload_to=&#39;adjuntos&#39;, null=True)</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral">    us=models.ForeignKey(UserStories)</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">&#39;&#39;&#39;</span></div><div class="ttc" id="namespaceproyectos_1_1models_html"><div class="ttname"><a href="namespaceproyectos_1_1models.html">proyectos.models</a></div><div class="ttdef"><b>Definition:</b> <a href="proyectos_2models_8py_source.html#l00001">models.py:1</a></div></div>
+<div class="ttc" id="namespacetipo_u_s_1_1models_html"><div class="ttname"><a href="namespacetipo_u_s_1_1models.html">tipoUS.models</a></div><div class="ttdef"><b>Definition:</b> <a href="tipo_u_s_2models_8py_source.html#l00001">models.py:1</a></div></div>
+<div class="ttc" id="namespaceusuario_1_1models_html"><div class="ttname"><a href="namespaceusuario_1_1models.html">usuario.models</a></div><div class="ttdef"><b>Definition:</b> <a href="usuario_2models_8py_source.html#l00001">models.py:1</a></div></div>
+<div class="ttc" id="namespaceflujos_1_1models_html"><div class="ttname"><a href="namespaceflujos_1_1models.html">flujos.models</a></div><div class="ttdef"><b>Definition:</b> <a href="flujos_2models_8py_source.html#l00001">models.py:1</a></div></div>
+<div class="ttc" id="classuser_story_1_1models_1_1_user_stories_html_a1b9d750558d9ba1d62ac8f9a8df8026a"><div class="ttname"><a href="classuser_story_1_1models_1_1_user_stories.html#a1b9d750558d9ba1d62ac8f9a8df8026a">userStory.models.UserStories.nombre_duplicado</a></div><div class="ttdeci">def nombre_duplicado(self, nombre, proyectoid)</div><div class="ttdef"><b>Definition:</b> <a href="user_story_2models_8py_source.html#l00038">models.py:38</a></div></div>
+<div class="ttc" id="classuser_story_1_1models_1_1_user_stories_html"><div class="ttname"><a href="classuser_story_1_1models_1_1_user_stories.html">userStory.models.UserStories</a></div><div class="ttdef"><b>Definition:</b> <a href="user_story_2models_8py_source.html#l00014">models.py:14</a></div></div>
+<div class="ttc" id="classuser_story_1_1models_1_1_user_stories_html_a2556b581ec600d9b6b2a6dea04454bd8"><div class="ttname"><a href="classuser_story_1_1models_1_1_user_stories.html#a2556b581ec600d9b6b2a6dea04454bd8">userStory.models.UserStories.asignado_a_user</a></div><div class="ttdeci">def asignado_a_user(self, usuario)</div><div class="ttdef"><b>Definition:</b> <a href="user_story_2models_8py_source.html#l00046">models.py:46</a></div></div>
+<div class="ttc" id="namespace_sprints_1_1models_html"><div class="ttname"><a href="namespace_sprints_1_1models.html">Sprints.models</a></div><div class="ttdef"><b>Definition:</b> <a href="_sprints_2models_8py_source.html#l00001">models.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,316 @@
+\hypertarget{namespaceflujos_1_1views}{}\section{Referencia del Namespace flujos.\+views}
+\label{namespaceflujos_1_1views}\index{flujos.\+views@{flujos.\+views}}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceflujos_1_1views_a4273003296b4d82ccf34ecf51e9bba91}{listar\+Flujos\+\_\+\+Proyecto} (request, proyectoid)
+\item 
+def \hyperlink{namespaceflujos_1_1views_abf86ed12fe2b9785d7702aa623f79f81}{crear\+\_\+\+Actividades} (request, proyectoid)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a9cdd32ae394fb2db365adadefda7486c}{crear\+Flujo} (request, proyectoid)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a79d092140d8c2d33e62696f05409eaa7}{ver\+\_\+\+Flujo} (request, idflujo)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a09ca2fed2592d766919538859efc5ea4}{asignar\+Actividades\+\_\+\+Flujo} (request, idflujo)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a9ff2afee741e668e0926f4258e5ee066}{modificar\+Flujo} (request, idflujo)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a26927ecf1ab50cab6e6a933cccdd7c37}{eliminar\+Actividad} (request, idactividad)
+\item 
+def \hyperlink{namespaceflujos_1_1views_ad1c3ffebeba7e01f0e1ad487706b36e1}{modificar\+Actividad} (request, idactividad)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a434334dc52186ee78d2192114c240544}{importar\+Flujo} (request, proyectoid)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a3a31bd6f34073f2923dcff58bdd9a268}{confirmar\+Importacion} (request, idflujo, idproyecto)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a753c3e27baea1ca6a2650f8967457200}{retroceder\+US} (request, idflujo, idus)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a2e1101b87df41457b1f1d8f8d6ddb103}{ver\+U\+S\+Para\+Cambiar\+Estado} (request, idflujo, idus)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a4bfaba7b53cb16ca47c2b1c4d531b394}{primera\+Actividad} (actividades)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a092501cfbefb645d642b0da75982bac0}{actividad\+Valida} (lista, string)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a125d7aefd22d39fbf95063a846791574}{cantidad\+De\+Actividades} (act)
+\item 
+def \hyperlink{namespaceflujos_1_1views_a70e67635ed51aef426d9c55027876b28}{retornar\+Actividad} (listaA, actA)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyVerb}Vistas relacionadas con el Modulo Flujos dentro del SGP.
+    Las vistas cumplen con las siguientes funciones:
+    - Listar Flujos de Proyecto
+    - Crear Actividades
+    - Crear un Flujo
+    - Ver un Fluijo
+    - Asignar Activiadades a un Flujo
+    - Modificar Actividades de un Flujo
+    - Eliminar Actividades de un Flujo
+    - Importar un Flujo
+    - Confirmar la Importacion de un Flujo
+\end{DoxyVerb}
+ 
+
+\subsection{Documentación de las funciones}
+\index{flujos\+::views@{flujos\+::views}!actividad\+Valida@{actividad\+Valida}}
+\index{actividad\+Valida@{actividad\+Valida}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{actividad\+Valida(lista, string)}{actividadValida(lista, string)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+actividad\+Valida (
+\begin{DoxyParamCaption}
+\item[{}]{lista, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a092501cfbefb645d642b0da75982bac0}{}\label{namespaceflujos_1_1views_a092501cfbefb645d642b0da75982bac0}
+
+
+Definición en la línea 448 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!asignar\+Actividades\+\_\+\+Flujo@{asignar\+Actividades\+\_\+\+Flujo}}
+\index{asignar\+Actividades\+\_\+\+Flujo@{asignar\+Actividades\+\_\+\+Flujo}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{asignar\+Actividades\+\_\+\+Flujo(request, idflujo)}{asignarActividades_Flujo(request, idflujo)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+asignar\+Actividades\+\_\+\+Flujo (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a09ca2fed2592d766919538859efc5ea4}{}\label{namespaceflujos_1_1views_a09ca2fed2592d766919538859efc5ea4}
+\begin{DoxyVerb}Asigna una avtividad al flujo que recibe como parametro
+:param request: Request del Usuario
+:param idflujo: id del flujo al que se le asiganra una actividad
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 148 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!cantidad\+De\+Actividades@{cantidad\+De\+Actividades}}
+\index{cantidad\+De\+Actividades@{cantidad\+De\+Actividades}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{cantidad\+De\+Actividades(act)}{cantidadDeActividades(act)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+cantidad\+De\+Actividades (
+\begin{DoxyParamCaption}
+\item[{}]{act}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a125d7aefd22d39fbf95063a846791574}{}\label{namespaceflujos_1_1views_a125d7aefd22d39fbf95063a846791574}
+
+
+Definición en la línea 453 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!confirmar\+Importacion@{confirmar\+Importacion}}
+\index{confirmar\+Importacion@{confirmar\+Importacion}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{confirmar\+Importacion(request, idflujo, idproyecto)}{confirmarImportacion(request, idflujo, idproyecto)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+confirmar\+Importacion (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo, }
+\item[{}]{idproyecto}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a3a31bd6f34073f2923dcff58bdd9a268}{}\label{namespaceflujos_1_1views_a3a31bd6f34073f2923dcff58bdd9a268}
+\begin{DoxyVerb}Confirmar la importacion de un Flujo en dentro del proyecto recibido como parametro
+:param request: Request del Usuario
+:param idflujo: id del flujo que sera importado
+:param idproyecto: id del proyecto en el que sera importado el flujo
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 318 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!crear\+\_\+\+Actividades@{crear\+\_\+\+Actividades}}
+\index{crear\+\_\+\+Actividades@{crear\+\_\+\+Actividades}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{crear\+\_\+\+Actividades(request, proyectoid)}{crear_Actividades(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+crear\+\_\+\+Actividades (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_abf86ed12fe2b9785d7702aa623f79f81}{}\label{namespaceflujos_1_1views_abf86ed12fe2b9785d7702aa623f79f81}
+\begin{DoxyVerb}Crea una Actividad dentro de un Proyecto
+:param request: Request de un Usuario
+:param proyectoid: id de un proyecto en el que se creara una actividad
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 44 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!crear\+Flujo@{crear\+Flujo}}
+\index{crear\+Flujo@{crear\+Flujo}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{crear\+Flujo(request, proyectoid)}{crearFlujo(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+crear\+Flujo (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a9cdd32ae394fb2db365adadefda7486c}{}\label{namespaceflujos_1_1views_a9cdd32ae394fb2db365adadefda7486c}
+\begin{DoxyVerb}Crea un  Flujo dentro de un Proyecto
+:param request: Request de un Usuario
+:param proyectoid: id de un proyecto en el que se creara un  Flujo
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 75 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!eliminar\+Actividad@{eliminar\+Actividad}}
+\index{eliminar\+Actividad@{eliminar\+Actividad}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{eliminar\+Actividad(request, idactividad)}{eliminarActividad(request, idactividad)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+eliminar\+Actividad (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idactividad}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a26927ecf1ab50cab6e6a933cccdd7c37}{}\label{namespaceflujos_1_1views_a26927ecf1ab50cab6e6a933cccdd7c37}
+\begin{DoxyVerb}Desasiganar uan Actividad de un Flujo
+:param request: Request del Usuario
+:param idactividad: id de la actividad que sera desasignada del Flujo al que fue asignado
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 234 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!importar\+Flujo@{importar\+Flujo}}
+\index{importar\+Flujo@{importar\+Flujo}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{importar\+Flujo(request, proyectoid)}{importarFlujo(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+importar\+Flujo (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a434334dc52186ee78d2192114c240544}{}\label{namespaceflujos_1_1views_a434334dc52186ee78d2192114c240544}
+\begin{DoxyVerb}Importar un Flujo del sistema y asignar al proyecto recibido como parametro
+:param request: Request del Usuario
+:param proyectoid: id del proyecto en donde se importara el flujo
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 299 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!listar\+Flujos\+\_\+\+Proyecto@{listar\+Flujos\+\_\+\+Proyecto}}
+\index{listar\+Flujos\+\_\+\+Proyecto@{listar\+Flujos\+\_\+\+Proyecto}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{listar\+Flujos\+\_\+\+Proyecto(request, proyectoid)}{listarFlujos_Proyecto(request, proyectoid)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+listar\+Flujos\+\_\+\+Proyecto (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{proyectoid}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a4273003296b4d82ccf34ecf51e9bba91}{}\label{namespaceflujos_1_1views_a4273003296b4d82ccf34ecf51e9bba91}
+\begin{DoxyVerb}Lista los Flujos que pertenecen a un proyecto
+:param request: Request del Usuario
+:param proyectoid: identificador de un proyecto
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 21 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!modificar\+Actividad@{modificar\+Actividad}}
+\index{modificar\+Actividad@{modificar\+Actividad}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{modificar\+Actividad(request, idactividad)}{modificarActividad(request, idactividad)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+modificar\+Actividad (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idactividad}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_ad1c3ffebeba7e01f0e1ad487706b36e1}{}\label{namespaceflujos_1_1views_ad1c3ffebeba7e01f0e1ad487706b36e1}
+\begin{DoxyVerb}Modificar el nombre  de una activiadad recibida como parametro
+:param request: Request del Usuario
+:param idactividad: id de la activaidad que sera modificada
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 265 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!modificar\+Flujo@{modificar\+Flujo}}
+\index{modificar\+Flujo@{modificar\+Flujo}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{modificar\+Flujo(request, idflujo)}{modificarFlujo(request, idflujo)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+modificar\+Flujo (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a9ff2afee741e668e0926f4258e5ee066}{}\label{namespaceflujos_1_1views_a9ff2afee741e668e0926f4258e5ee066}
+\begin{DoxyVerb}Modificar el Flujo que se recibe como parametro
+:param request: Request del usuario
+:param idflujo: id del flujo cuyos campos y actividades seran modificados
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 186 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!primera\+Actividad@{primera\+Actividad}}
+\index{primera\+Actividad@{primera\+Actividad}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{primera\+Actividad(actividades)}{primeraActividad(actividades)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+primera\+Actividad (
+\begin{DoxyParamCaption}
+\item[{}]{actividades}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a4bfaba7b53cb16ca47c2b1c4d531b394}{}\label{namespaceflujos_1_1views_a4bfaba7b53cb16ca47c2b1c4d531b394}
+\begin{DoxyVerb}Funcion encargada de encontrar la primera actividad dentro de una lsita de actividades
+:param actividades: lista de actividades
+:return: la primera actividad de lista
+\end{DoxyVerb}
+ 
+
+Definición en la línea 440 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!retornar\+Actividad@{retornar\+Actividad}}
+\index{retornar\+Actividad@{retornar\+Actividad}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{retornar\+Actividad(lista\+A, act\+A)}{retornarActividad(listaA, actA)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+retornar\+Actividad (
+\begin{DoxyParamCaption}
+\item[{}]{listaA, }
+\item[{}]{actA}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a70e67635ed51aef426d9c55027876b28}{}\label{namespaceflujos_1_1views_a70e67635ed51aef426d9c55027876b28}
+
+
+Definición en la línea 459 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!retroceder\+US@{retroceder\+US}}
+\index{retroceder\+US@{retroceder\+US}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{retroceder\+U\+S(request, idflujo, idus)}{retrocederUS(request, idflujo, idus)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+retroceder\+US (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo, }
+\item[{}]{idus}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a753c3e27baea1ca6a2650f8967457200}{}\label{namespaceflujos_1_1views_a753c3e27baea1ca6a2650f8967457200}
+\begin{DoxyVerb}Retroce un US en la actividad que especifica el Scrum Master
+:param request: Request del Usuario
+:param idflujo: id del flujo que sera importado
+:param idus: id del US a retroceder
+:return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 363 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!ver\+\_\+\+Flujo@{ver\+\_\+\+Flujo}}
+\index{ver\+\_\+\+Flujo@{ver\+\_\+\+Flujo}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{ver\+\_\+\+Flujo(request, idflujo)}{ver_Flujo(request, idflujo)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+ver\+\_\+\+Flujo (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a79d092140d8c2d33e62696f05409eaa7}{}\label{namespaceflujos_1_1views_a79d092140d8c2d33e62696f05409eaa7}
+\begin{DoxyVerb}Ver los datos basicos de un Flujo(nombre, lista de acitvidades y tipo de US)
+:param request: Resuqest del Usuario
+:param idflujo: id del Flujo que se quiere ver
+:return:  None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 116 del archivo views.\+py.
+
+\index{flujos\+::views@{flujos\+::views}!ver\+U\+S\+Para\+Cambiar\+Estado@{ver\+U\+S\+Para\+Cambiar\+Estado}}
+\index{ver\+U\+S\+Para\+Cambiar\+Estado@{ver\+U\+S\+Para\+Cambiar\+Estado}!flujos\+::views@{flujos\+::views}}
+\subsubsection[{\texorpdfstring{ver\+U\+S\+Para\+Cambiar\+Estado(request, idflujo, idus)}{verUSParaCambiarEstado(request, idflujo, idus)}}]{\setlength{\rightskip}{0pt plus 5cm}def flujos.\+views.\+ver\+U\+S\+Para\+Cambiar\+Estado (
+\begin{DoxyParamCaption}
+\item[{}]{request, }
+\item[{}]{idflujo, }
+\item[{}]{idus}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceflujos_1_1views_a2e1101b87df41457b1f1d8f8d6ddb103}{}\label{namespaceflujos_1_1views_a2e1101b87df41457b1f1d8f8d6ddb103}
+\begin{DoxyVerb}"
+    Cambiar de estado el US que esta en un flujo. Ambos son recibidos en los parametros
+    :param request: Request del Usuario
+    :param idflujo: id del flujo donde esta el US
+    :param idus: id del US a cambiar de estado
+    :return: None
+\end{DoxyVerb}
+ 
+
+Definición en la línea 397 del archivo views.\+py.
+
